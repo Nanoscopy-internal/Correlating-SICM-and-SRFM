@@ -1,5 +1,96 @@
 \section{Introduction}
 \label{sec:introduction}
+Many cellular processes like exo- and endocytosis, cell growth, division and
+migration, to name only a few, require the rearrangement, growth or shrinkage
+of the cellular membrane. Scanning Ion Conductance Microscopy (SICM)
+\cite{Hansma1989} is a contact-free scanning probe technique which, if applied
+to cellular specimen, provides information about the dynamics of the
+topography of the cell membrane. However, the underlying dynamics of the
+molecular machinery which orchestrates the cell membrane dynamics remain
+unresolved by SICM investigations. The latter can be resolved by fluorescence
+microscopy (FM), which allows tagging a protein of interest with a fluorescent
+marker and observing its dynamics. Therefore, correlating fluorescence and
+scanning ion conductance microscopy data might help to unravel the mechanisms
+that underlie the cellular processes listed above that occur at the cellular
+membrane.
+
+\begin{figure}
+  \sidecaption[t]
+  \includegraphics{gr/intro/Fig_SICM-resolution}
+  \caption{\textbf{Resolution of SICM.} \textbf{A} \textbf{B} Two
+    consecutive SICM recordings of the equatorial segment of a living boar
+    spermatozoon recorded 10 minutes apart with a scanning pipette with
+    $r_\mathrm{i} \approx 6.75\,\text{nm}$}
+  \label{fig:sicm-resolution}
+\end{figure}
+  
+The resolution of SICM is determined by the inner opening radius
+$r_\mathrm{i}$ of the scanning pipette and can be approximated as
+$3r_\mathrm{i}$ (Fig.~\ref{fig:sicm-resolution}A)
+\cite{rheinlaender:094905,Rheinlaender2015}.  Thus, the resolution of SICM is
+only limited by the technical limits to produce pipettes with very small
+openings. Pipettes with radii of approximately 6.75\,nm have been used in for
+SICM imaging (Fig.~\ref{fig:sicm-resolution}B) \cite{Shevchuk2008}. In
+contrast, the resolution in light microscopy is fundamentally limited by the
+diffraction of light. As Ernst Abbe found out in 1873, a beam of light cannot
+be focused to a spot smaller than the resolution limit $d_\text{min}$ \cite{Abbe1873}:
+\begin{equation}
+  d_\text{min} = \frac\lambda{2n\sin\alpha} = \frac\lambda{2\mathrm{NA}}\text{.}
+  \label{eq:diffraction-limit}
+\end{equation}
+Here, $\lambda$ denotes the wavelength of the light used to generate the
+image, $n$ the diffractive index of the medium between sample and objective
+lense and $\alpha$ the half-cone opening angle of the objective lense. The
+product $n\sin\alpha$ is called the numerical aperture $\mathrm{NA}$ of the
+objective. The exact limit, of course, depends on $\lambda$ and the NA of the
+objective, but as a rule of thumb, it is often stated that the resolution
+limit is in the range of 200\,nm. This is approximately 14 times the size of
+the smallest structures observed in the SICM recordings shown in
+Fig.~\ref{fig:sicm-resolution}B, which were reported to be 14\,nm
+\cite{Shevchuk2008}.
+
+\begin{figure}
+  \sidecaption
+  \includegraphics{gr/intro/Fig_SICM-and-Light-resolution}%
+  \caption{\textbf{Hypothetical fluorescence analysis of proteins in the boar
+      spermatozoon.} \textbf{A:} Proteins A and B in the stable structures
+    observed by SICM. \textbf{B:} Hypothetical positions of the fluorescent
+    labels of proteins A and B. Scale bar: 200\,nm \textbf{C:} Computed
+    fluorescence image.}
+  \label{fig:sicm-and-light-resolution}
+\end{figure}
+In all stable structures in the recordings (highlighted by
+the dashed lines) at least one group of three protrusions arranged in a line
+are observable. If one assumes, without any biological support and just to be
+able to exemplify the impact of the limited resolution of light microscopy,
+that such a row is comprised of two different proteins, one at the first and
+last position (magenta arrows in Fig.~\ref{fig:sicm-and-light-resolution}A),
+and the other one on the central spot (green arrows in Fig.~\ref{fig:sicm-and-light-resolution}A), and one further assumes
+that the two different proteins have been labelled by two different markers
+(the positions of the markers are indicated by the magenta and green dots in Fig.~\ref{fig:sicm-and-light-resolution}B),
+the resulting light microscopy images would result in      
+
+
+% Since its invention, the light microscope is a widely used tool in
+% biology. The development of the fluorescence and the confocal microscope
+% \cite{Heimstaedt1911,Minsky1988} along with the improvement and development in
+% staining techniques \cite{Coons1942,Tsien1998} made fluorescence microscopy
+% (FM) a standard tool in the life sciences and medicine. With the new
+% development of super-resolved fluorescence microscopy (SRFM)
+% \cite{hell+wichmann,Betzig2006,Rust2006}, fluorescence microscopy entered the
+% world beyond Abbe's diffraction limit \cite{Abbe1873}, and now allows to
+% routinely investigate questions at a length scale below 100\,nm.
+
+% SICM, as any scanning probe technique, provides information about the surface
+% of the scanned sample. In contrast, FM provides information about the
+% distribution of the labeled specimen. Gathering complementary information from
+% the same sample, surface topography  
+
+% \begin{equation}
+%   \label{eq:abbe}
+%   d = \frac{\lambda}{2 n \sin\alpha}
+% \end{equation}
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../manuscript"
