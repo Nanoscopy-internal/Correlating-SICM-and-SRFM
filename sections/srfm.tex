@@ -1,6 +1,132 @@
-\section{Super-Resolved Fluorescence Microscopy}
+
+\subsection{Super-Resolved Fluorescence Microscopy}
 \label{sec:srfm}
+In order to understand how super-resolved fluorescence microscopy (SRFM)
+circumvents the diffraction limit, it is helpful to recapitulate the operating
+principle of fluorescence microscopy (FM). Fluorescence is the process of the
+absorption of a photon by a molecule, the fluorophore, followed by the
+spontaneous emission of a second photon. The transitions between the energetic
+states of the fluorophore are depicted in
+Fig.~\ref{fig:jablonski-fluorescence}a. Due to the non-radiative loss of
+energy during the involved vibrational decays (black arrows in
+Fig.~\ref{fig:jablonski-fluorescence}a), the energy $h\nu_\text{em}$ of the
+emitted photon is smaller than the energy of the absorbed photon
+$h\nu_\text{ex}$ (here, $h$ denotes the Planck constant). Since the frequency $\nu$
+of a photon is given by $c\lambda^{-1}$ (with $c$: speed of light, $\lambda$:
+wavelength of the photon), the wavelength $\lambda_\text{em}$ of the emitted
+photon is larger than the wavelength $\lambda_\text{ex}$ of the absorbed
+photon.      
+
+\begin{figure}
+%  \sidecaption
+  \centering
+  \includegraphics{gr/intro/Jablonski-fluorescence}
+  
+  \caption{%
+    \textbf{Principle of fluorescence microscopy.}
+    \textbf{a:}
+      Jablonski diagram of fluorescence. A photon of energy
+      $h\nu_\text{ex}$ gets absorbed and excites the molecule from its
+      electronic ground state $S_0$ to a vibrational excited state of the
+      electronic state $S_1$ (green arrow). After radiation-less relaxation
+      (black arrow) into the vibrational ground state of $S_1$, the molecule
+      returns to any vibrational state of $S_0$ (red arrow) by emitting a photon
+      of energy $h\nu_\text{em}$, after which it relaxes to the lowest
+      vibrational state of $S_0$.
+    \textbf{b:}
+      Typical absorbance (green) and
+      emission (red) spectra of a fluorescent dye molecule. Green and red
+      rectangles indicate the wavelength range used for excitation (exc) and
+      detection.
+  }
+  \label{fig:jablonski-fluorescence}
+\end{figure}
+
+Typical absorbance/emission spectra of fluorophores used as dyes in FM are
+shown in Fig.~\ref{fig:jablonski-fluorescence}b. In FM, a single wavelength or
+a wavelength range (green rectangle Fig.~\ref{fig:jablonski-fluorescence}b) in
+suitable to excite the fluorophore used is chosen, by using a suitable laser
+or LED or by selecting the wavelength range via a band-pass filter from a
+white light source and send through the objective lens of the microscope to
+the sample. In most FMs (the so called epifluorescence microscopes), the
+emission is collected via the same objective lens. Since the emission is
+red-shifted with respect to the excitation wavelength, the emitted photons
+(wavelength range depicted by red rectangle in
+Fig.~\ref{fig:jablonski-fluorescence}b) can be separated from the ones used to
+excite the fluorophores by a dichroic mirror.
+
+\begin{figure}
+  \includegraphics{gr/intro/FM-setups}
+  \caption{\textbf{Beam paths and major components of fluorescent
+      microscopes.} \textbf{a:} Excitation (green) and emission (red) beam
+    paths of a wide-field microscope. \textbf{b:} Excitation (green) and
+    emission beam paths (red) of a confocal microscope.  \textbf{c:} Emission
+    beam path (filters omitted for clarity) of a confocal microscope showing
+    how out-of-focus emission (dashed and dotted lines) is suppressed by the
+    confocal pinhole.}
+  \label{fig:FM-setups}
+\end{figure}
+
+The two most common implementations of FM used in the life sciences are the
+wide-field and the confocal microscope. Both use a dichroic mirror to separate
+excitation and emission, but their implementations differ in the way how the
+sample is excited and how the emission is recorded. The beam paths and the
+major components of a wide-field and a confocal FM are depicted in
+Fig.~\ref{fig:FM-setups}. In a wide-field FM (Fig.~\ref{fig:FM-setups}a), the
+entire sample is excited at 
+the same time, and all fluorophores in the sample emit at the same time
+(yellow circles in the right inset in Fig.~\ref{fig:FM-setups}a). The emission
+of the fluorophores (solid red shape in Fig.~\ref{fig:FM-setups}a, only five
+beam paths are shown for clarity) is collected by the objective lens, passes
+the dichroic mirror and is further cleared by a band-pass filter. The emission
+then is focused by the tube lens onto the camera, which records an image of
+the emission of all fluorophores at the same time.
+
+Each fluorophore in the sample generates a diffraction limited spot on the
+camera, and spots which are not separated in space by at least the diffraction
+cannot be distinguished as single spots. Thus, the wavelength which determines
+the resolution in a wide-field microscope is the wavelength $\lamba_\text{em}$
+of the emission.
+
+The major disadvantage of a wide-field microscope is that the sample is not
+only illuminated evenly in the focal plane of the objective lens, but also
+fluorophores outside the focal plane in $z$-direction are excited and their
+emission is collected (not shown for clarity). Since they are not located in
+the focal plane of the objective lens, their emission does not result in a
+sharp spot on the camera, but instead appears as a blurred background.    
+
+This led to the invention of the confocal microscope
+. The beam path of a confocal microscope is
+shown in Fig.~\ref{fig:FM-setups}b. Here, the excitation light (green solid
+shape) is focused into the sample by the objective lens and only the
+fluorophores within the diffraction limited spot are excited. Thus, the
+wavelength which determines the resolution of a confocal microscope is the
+excitation wavelength $\lambda_\text{ex}$.  
+
+
+% Ernst Abbe found in 1873 \cite{Abbe1873} that the resolution $d$ of
+% conventional light microscopes is limited by diffaction to 
+% \begin{equation}
+%   d_\text{min} = \frac{\lambda}{2\mathrm{NA}} = \frac\lambda{2n\sin\alpha}\text.
+%   \label{eq:abbe}
+% \end{equation}
+%  One consequence of the diffraction limit is
+% that a beam of light cannot be focused to a spot smaller than $d_\text{min}$.
+
+% The place in the micropscope where the diffraction limited spot limits the
+% resolution of a microscopic recording depends on the implementation of the
+% microscope.  
+
+% \begin{figure}
+% %  \includegraphics{gr/introduction/}
+% \end{figure}
+
 \subsection{General approach}
+
+\subsubsection{Different approaches}
+While the majority of SRFM techniques follows the approach outlined above,
+other techniques exist that use different approaches.  
+
 
 \subsection{Camera-based techniques}
 
