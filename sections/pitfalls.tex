@@ -1,24 +1,67 @@
 \section{Potential Pitfalls}
 \label{sec:pitfalls}
-Combining SRFM and SICM in one setup is bound to bring up some potential pitfalls, some of which are discussed in the following:
+Combining SRFM and SICM in one setup is bound to bring up some potential
+pitfalls, some of which are discussed in the following:
 
-To avoid some problems from the beginning, both the SRFM and SICM setups should provide spatial resolutions in the same range. Also, if possible, one software should be used to control both setups to prevent delays in the imaging process due to ... (?)
+To avoid some problems from the beginning, both the SRFM and SICM setups
+should provide spatial resolutions in the same range. Also, if possible, one
+software should be used to control both setups to prevent delays in the
+imaging process due to ... (?)
 
-Some potential pitfalls can arise when aligning the SRFM and SICM setups. There are two alignment options: The first one is aligning the pipette tip and the laser beam only in the xy plane, e.g. for imaging fluorescent proteins in the cytoskeleton and the cell membrane simultaneously. The second one is additionally aligning the tip and beam in the z plane, e.g. to image cell membrane and fluorescent particles or proteins within the membrane simultaneously, as has been done in SSCM (?4?). 
+Some potential pitfalls can arise when aligning the SRFM and SICM
+setups. There are two alignment options: The first one is aligning the pipette
+tip and the laser beam only in the xy plane, e.g. for imaging fluorescent
+proteins in the cytoskeleton and the cell membrane simultaneously. The second
+one is additionally aligning the tip and beam in the z plane, e.g. to image
+cell membrane and fluorescent particles or proteins within the membrane
+simultaneously, as has been done in SSCM (?4?).
 
-It has to be put into consideration whether fine adjustment screws are enough to align the pipette and the beam. It is apparently sufficient for aligning SICM and confocal microscopes (??). In case it isn't accurate enough piezo elements might have to be used. However, the usage of 3 piezo elements mounted to the same platform, may it be the pipette holder or sample stage, is reported to have caused cross-talk during sample positioning leading to image artifacts in the range of 100 nm (?1?). Hence, it would be better to uncouple xy piezos from the z piezo. Furthermore, z piezos come with an increased risk of piezo drift. Therefore, especially the sample stage should ideally avoid z piezo usage.
+It has to be put into consideration whether fine adjustment screws are enough
+to align the pipette and the beam. It is apparently sufficient for aligning
+SICM and confocal microscopes (??). In case it isn't accurate enough piezo
+elements might have to be used. However, the usage of 3 piezo elements mounted
+to the same platform, may it be the pipette holder or sample stage, is
+reported to have caused cross-talk during sample positioning leading to image
+artifacts in the range of 100 nm (?1?). Hence, it would be better to uncouple
+xy piezos from the z piezo. Furthermore, z piezos come with an increased risk
+of piezo drift. Therefore, especially the sample stage should ideally avoid z
+piezo usage.
 
-Both alignment options may lead to the pipette tip reflecting the beam and thereby distorting the resulting recordings. In this case the pipette tip would have to be retracted until it can't reflect the beam light anymore, before a recording with the optical setup can be executed. Consequently, this means the SRFM and the SICM recording can't be executed simultaneously but successively.
+Both alignment options may lead to the pipette tip reflecting the beam and
+thereby distorting the resulting recordings. In this case the pipette tip
+would have to be retracted until it can't reflect the beam light anymore,
+before a recording with the optical setup can be executed. Consequently, this
+means the SRFM and the SICM recording can't be executed simultaneously but
+successively.
 
-While this might seem like a drawback extending the overall recording time, it also solves another problem that comes with combining SRFM and SICM: photo-bleaching and photo-damage of the sample. SRFM techniques like STED microscopy come with a general risk of photo-bleaching and -damage as high intensity lasers are used (?6?). Combining SRFM with SICM increases this risk, as SICM is a much slower imaging technique. The pipette will not only have to be moved in the xy plane but also in the z plane to avoid sample contact. Hence, the imaging speed will mostly be dependent on the SICM capillary speed especially in z direction. If the sample is illuminated by the laser continuously during capillary approach and retraction, photo-bleaching and -damage is likely to occur. Therefore, illuminating the sample right after SICM surface detection, recording and pipette retraction for a short period of time would not only result in reflection avoidance but also in less photo-bleaching and -damage. In case, light reflection by the scanning capillary doesn't occur, the sample could be illuminated right after surface detection leading to a faster imaging speed of the combined setup.
+While this might seem like a drawback extending the overall recording time, it
+also solves another problem that comes with combining SRFM and SICM:
+photo-bleaching and photo-damage of the sample. SRFM techniques like STED
+microscopy come with a general risk of photo-bleaching and -damage as high
+intensity lasers are used (?6?). Combining SRFM with SICM increases this risk,
+as SICM is a much slower imaging technique. The pipette will not only have to
+be moved in the xy plane but also in the z plane to avoid sample
+contact. Hence, the imaging speed will mostly be dependent on the SICM
+capillary speed especially in z direction. If the sample is illuminated by the
+laser continuously during capillary approach and retraction, photo-bleaching
+and -damage is likely to occur. Therefore, illuminating the sample right after
+SICM surface detection, recording and pipette retraction for a short period of
+time would not only result in reflection avoidance but also in less
+photo-bleaching and -damage. In case, light reflection by the scanning
+capillary doesn't occur, the sample could be illuminated right after surface
+detection leading to a faster imaging speed of the combined setup.
 
-Another problem stemming from capillary movement is the resonance of the pipette resulting from it. Some groups have ensured resonance reduction by using a v-groove mounting plate for the capillary instead of the conventional patch clamp pipette holders (?1?).
+Another problem stemming from capillary movement is the resonance of the
+pipette resulting from it. Some groups have ensured resonance reduction by
+using a v-groove mounting plate for the capillary instead of the conventional
+patch clamp pipette holders (?1?).
 
  	
-	 		mechanical shutters? limited switching frequency
-	 			switch beams by switching akkusto-optical modulators (AOM)
+mechanical shutters? limited switching frequency switch beams by switching
+akkusto-optical modulators (AOM)
 
-adjusting focal plane of the optical setup might lead to mismatch in superimposition of excitation and depletion beam
+adjusting focal plane of the optical setup might lead to mismatch in
+superimposition of excitation and depletion beam
 
 
 %%% Local Variables:
