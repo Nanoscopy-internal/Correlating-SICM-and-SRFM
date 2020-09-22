@@ -1,6 +1,6 @@
 
-\subsection{Super-Resolved Fluorescence Microscopy}
-\label{sec:srfm}
+\subsection{Fluorescence Microscopy}
+\label{sec:fm}
 In order to understand how super-resolved fluorescence microscopy (SRFM)
 circumvents the diffraction limit, it is helpful to recapitulate the operating
 principle of fluorescence microscopy (FM). Fluorescence is the process of the
@@ -101,7 +101,95 @@ shown in Fig.~\ref{fig:FM-setups}b. Here, the excitation light (green solid
 shape) is focused into the sample by the objective lens and only the
 fluorophores within the diffraction limited spot are excited. Thus, the
 wavelength which determines the resolution of a confocal microscope is the
-excitation wavelength $\lambda_\text{ex}$.  
+excitation wavelength $\lambda_\text{ex}$.  In contrast to the wide-field
+microscope, the emission of the fluorophores is focused onto a pinhole which
+is located in front of a single detector (left inset in
+Fig.~\ref{fig:FM-setups}b). Since this setup does not allow imaging the entire
+sample at once, the sample has to be scanned with respect to the excitation
+light beam and the image is collected pixel by
+pixel. Fig.~\ref{fig:FM-setups}c illustrates the major effect of the pinhole:
+Emission from out-of-focus planes (dotted and dashed lines) is blocked by the
+pinhole since it is located in the same focal plane as the sample (thus the
+name \emph{confocal}). 
+
+\subsection{Circumventing the diffraction limit}
+\label{sec:circumvent-diffraction-limit}
+The general approach to circumvent the diffraction limit is to reduce the
+fluorophores within a diffraction limited spot which contribute to the
+recorded signal, that is, to turn the fluorophores into an ``off''-state. Only
+the fluorophores which contribute to the signal remain in the ``on''-state.
+However, a few more approaches exist, for example 4$\pi$-microscopy
+\cite{Hell1994} or structured illumination microscopy (SIM)
+\cite{Guerra1995}. The first uses two objectives on opposite sides of the
+sample, which renders it impossible to be combined with SICM since the space
+required for the scanning pipette is already occupied by the second
+objective. In contrast, SIM is implemented on a wide-field microscope and
+could thus be combined with SICM. Therefore, combining SIM and SICM is similar
+to combining SICM with other wide-field based techniques (see
+section~\ref{sec:smlm}). Since the gain in resolution is low compared with the
+approaches explained in sections~\ref{sec:smlm}
+and~\ref{sec:deterministic-approaches}, we refrain from explaining SIM in
+detail here.
+
+
+\subsubsection{Stochastic approaches}
+\label{sec:smlm}
+The stochastic approaches to SRFM use dye molecules which can be switched
+between an inactivated (``off'') and an activated (``on'') state by light of a
+specific wavelength. If only a sparse subset of molecules is activated, such
+that, on average, only one dye molecule per diffraction limited spot emits,
+the position of the emitting molecule can be localised with much better
+precision than the diffraction limit. If this is repeated until all
+fluorophores have emitted, plotting the positions instead of the emission of
+all fluorophores yields an image with resolution beyond the diffraction
+limit (localisation microscopy). The first techniques using this principle
+were photo-activated localisation microscopy (PALM) \cite{Betzig2006} (using
+the Eos fluorescent protein \cite{Wiedenmann2004} as marker), fluorescence
+photo-activation localisation microscopy (FPALM) \cite{Hess2006} (using
+photo-activatable GFP as marker), and stochastical
+optical reconstruction microscopy (STORM) \cite{Rust2006} (using Cy5 and Cy3
+dyes).
+
+\begin{figure}
+  \centering
+  \includegraphics{gr/intro/localisation-mic}
+  \caption{}
+  \label{fig:lm}
+\end{figure}
+
+The principle of these methods is illustrated in
+Fig.~\ref{fig:lm}. Initially, all fluorophores within the sample are
+inactivated (``off''-state, grey dots in Fig.~\ref{fig:lm}a). After applying light suitable to switch the fluorophores
+(cyan background, Fig.~\ref{fig:lm}b) from the inactivated to
+the activated (``on'') state (white dots), the activated molecules are excited
+(green background, yellow dots) and their emission is recorded. The excitation
+light is applied as long as all excited molecules have bleached (black
+dots). The series of activation, excitation and read-out is repeated until all
+fluorophores have been excited and bleached, which results in a set of images
+containing diffraction limited emission spots of all fluorophores in the
+sample.
+
+In a post-processing step (Fig.~\ref{fig:lm}c), the positions of the
+fluorophores are determined by fitting (an approximation of) the instrument's
+point spread function to the data. The positions are plotted as Gaussian
+distributions with a standard deviation equal to the uncertainty of the
+determination of the position by the fit, finally yielding an image with an
+improved resolution (Fig.~\ref{fig:lm}c, right).
+
+The resolution provided by this approach scales with the number of photons $N$
+that are detected and theoretically is given by $\sigma_\text{PSF}/\sqrt{N}$
+(with $\sigma_\text{PSF}$ denoting the standard deviation of the point spread
+function of the microscope, which is in the range of 100\,nm). However, in
+practice the resolution is range of 20\,nm \cite{Betzig2006} since the
+theoretical resolution cannot be reached due to background, noise and other
+factors. A more detailed description of the resolution enhancement by
+localisation is provided by \cite{Mortensen2010}.
+
+\subsubsection{Deterministic approaches}
+\label{sec:deterministic-approaches}
+
+% The first concept to circumvent the diffraction limit was published in 1994
+% and realised in 2000 \cite{hell+wichmann,Klar2000}
 
 
 % Ernst Abbe found in 1873 \cite{Abbe1873} that the resolution $d$ of
@@ -128,7 +216,7 @@ While the majority of SRFM techniques follows the approach outlined above,
 other techniques exist that use different approaches.  
 
 
-\subsection{Camera-based techniques}
+
 
 \subsection{Scanning techniques}
 %%% Local Variables:
