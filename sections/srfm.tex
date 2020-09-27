@@ -185,17 +185,34 @@ function of the microscope, which is in the range of 100\,nm). However, in
 practice the resolution is in the range of 20\,nm \cite{Betzig2006,Rust2006}
 since the theoretical resolution cannot be reached due to background, noise
 and other factors. A more detailed description of the resolution enhancement
-by localisation is provided by \cite{Mortensen2010}.
+by localisation is provided by \cite{Mortensen2010}. 
 
 This brief explanation is far from being exhaustive and does not consider the
 differences in the implementations of the various techniques. An in-depth
 overview is provided by several reviews of the techniques
-\cite{Patterson2010,Sengupta2014,Liu2015,Sauer2017}, suitable dyes \cite{Li2018a} as well
-as by detailed imaging protocols \cite{Gould2009,Schermelleh2010,Linde2011}.
+\cite{Patterson2010,Sengupta2014,Liu2015,Sauer2017}, suitable dyes
+\cite{Li2018a} as well as by detailed imaging protocols
+\cite{Gould2009,Schermelleh2010,Linde2011}. However, one aspect of the
+implementation which is important for the potential combination with SICM is
+the illumination scheme used by these methods. Since wide-field illumination
+is required to record the emission of the activated fluorophores, out-of-focus
+emission occurs, which increases the background in the recordings and affects
+the resolution. To avoid this, a total internal reflection (TIRF) illumination
+scheme \cite{AMBROSE1956,Axelrod1981} is used, which limits the excitation to
+the layer close to the interface of the microscopy slide and the sample.   
 
 
 \subsubsection{Deterministic approaches}
 \label{sec:deterministic-approaches}
+In contrast to the stochastic approaches, which switch the fluorophores
+randomly in space, the deterministic approaches use a single-spot illumination
+and switch the fluorophores in the periphery of the excitation spot. The
+underlying principle is called reversible saturable optical fluorescence
+transitions (RESOLFT). Methods that use this principle are stimulated emission
+depletion (STED) microscopy \cite{hell+wichmann,Klar2000}, ground state
+depletion (GSD) microscopy \cite{Hell1995,Bretschneider2007} and RESOLFT with
+photo-switchable proteins \cite{Hofmann2005}. The latter is often referred to
+as RESOLFT microscopy, although STED and GSD use the RESOLFT principle, too. 
 
 \begin{figure}
   \centering
@@ -205,11 +222,24 @@ as by detailed imaging protocols \cite{Gould2009,Schermelleh2010,Linde2011}.
     superimposed and the sample is scanned. Fluorophores in the center are
     excited and emit spontaneously (yellow dot), while the depletion beam
     induces stimulated emission of the fluorophores in the periphery (black
-    dots). \textbf{c:} Jablonski diagram of stimulated emission (SE, left) and
-    wavelengths of excitation (ex), detection (det) and stimulated emission
-    (SE) superimposed on the absorbance/emission spectrum of a fluorescent dye
-    (right).}
+    dots). \textbf{c:} (left) Line profile of the intensity of the depletion
+    beam (red) and probability to induce stimulated emission (black); (center)
+    Jablonski diagram of stimulated emission (SE); (right) wavelengths of
+    excitation (ex), detection (det) and stimulated emission (SE) superimposed
+    on the absorbance/emission spectrum of a fluorescent dye.}
+  \label{fig:STED-principle}
 \end{figure}
+
+As an example for RESOLFT, the principle of STED microscopy is sketched in
+Fig.~\ref{fig:STED-principle}. The excitation spot
+(Fig.~\ref{fig:STED-principle}a, top) is superimposed with a second, ring- or
+doughnut-shaped spot (Fig.~\ref{fig:STED-principle}a, bottom). The
+fluorophores are excited by the excitation light, but only those located in
+the center of the minimum of the depletion beam are allowed to emit
+spontaneously (yellow dot). The fluorophores at the periphery are de-excited
+by the depletion and undergo stimulated emission (black dots).    
+
+
 % The first concept to circumvent the diffraction limit was published in 1994
 % and realised in 2000 \cite{hell+wichmann,Klar2000}
 
