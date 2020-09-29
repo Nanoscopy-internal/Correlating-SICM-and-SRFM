@@ -9,12 +9,29 @@ For resolving tiny structures like single cytoskeleton fibers, nanoparticle, wit
 than the diffraction-limit, or protein complexes, it would be helpful to use microscopy
 techniques, which can resolve structures beyond the diffraction limit.
 
-One of that techniques is STED microscopy (see section~\ref{sec:deterministic-approaches}). In a 
-proof-of-principle study the topography of a group of fixed HeLa cells together with the 
-distribution of actin filaments was investigated \cite{Hagemann2018}. Although both methods were 
-able to investigate living cells, the cells needs to be fixed in that study, because the 
-investigation was consecutively done onto two microscopes. The topography was measured with SICM 
-and the distribution of actin with STED microscopy (see figure~\ref{fig:SICM_STED1}).
+% Hier füge ich jetzt einen Abschnitt zum diffraction limit ein. Ich habe gesehen das du (Patrick) 
+% das in deiner SRFM-Einleitung nur im Kommentar eingefügt hattest.
+
+The diffraction limit was defined by Ernst Abbe in 1873 \cite{Abbe1873} and could be described 
+with the following equation.
+
+\begin{equation}
+d = \frac{\lambda}{2 n \sin{\alpha}}
+\label{eq:Abbe_diff}
+\end{equation}
+
+In this equation $\lambda$ is the wavelength of light, $n$ the Brechungsindex (german) of the 
+medium between objective and sample and $\alpha$ is half the opening Winkel (german) of the 
+objective. Following this equation and under ideal conditions, the limit for structures, that 
+could be resolved, would be halftimes the wavelength.
+
+One of that techniques, that can resolve structures beyond the diffraction limit, is STED 
+microscopy (see section~\ref{sec:deterministic-approaches}). In a proof-of-principle study the 
+topography of a group of fixed HeLa cells together with the distribution of actin filaments was
+investigated \cite{Hagemann2018}. Although both methods were able to investigate living cells, the 
+cells were fixed in that study, because the investigation was done consecutively onto two 
+microscopes. The topography was measured with SICM and the distribution of actin with STED 
+microscopy (see figure~\ref{fig:SICM_STED1}).
 
 % Hier soll jetzt Figure 4 unserer ACSNano-Publikation folgen. Patrick, du hast doch die 
 % Ursprungs-/Original-PDF-Version davon, oder? Kannst du die dann bitte hier einfügen und 
