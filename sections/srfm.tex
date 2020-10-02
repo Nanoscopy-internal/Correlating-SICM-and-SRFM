@@ -222,11 +222,12 @@ as RESOLFT microscopy, although STED and GSD use the RESOLFT principle, too.
     superimposed and the sample is scanned. Fluorophores in the center are
     excited and emit spontaneously (yellow dot), while the depletion beam
     induces stimulated emission of the fluorophores in the periphery (black
-    dots). \textbf{c:} (left) Line profile of the intensity of the depletion
-    beam (red) and probability to induce stimulated emission (black); (center)
-    Jablonski diagram of stimulated emission (SE); (right) wavelengths of
-    excitation (ex), detection (det) and stimulated emission (SE) superimposed
-    on the absorbance/emission spectrum of a fluorescent dye.}
+    dots). \textbf{c:} (left) Jablonski diagram of stimulated emission (SE);
+    (center) Line profile of the intensity of the depletion beam (red) and
+    probability (prob) to induce stimulated emission (black); (right)
+    wavelengths of excitation (ex), detection (det) and stimulated emission
+    (SE) superimposed on the absorbance/emission spectrum of a fluorescent
+    dye.}
   \label{fig:STED-principle}
 \end{figure}
 
@@ -237,7 +238,31 @@ doughnut-shaped spot (Fig.~\ref{fig:STED-principle}a, bottom). The
 fluorophores are excited by the excitation light, but only those located in
 the center of the minimum of the depletion beam are allowed to emit
 spontaneously (yellow dot). The fluorophores at the periphery are de-excited
-by the depletion and undergo stimulated emission (black dots).    
+by the depletion beam and undergo stimulated emission (black dots). The
+Jablonski diagram of stimulated emission is shown in
+Fig.~\ref{fig:STED-principle}c (left). An incoming photon of the depletion
+beam interacts with the excited fluorophore and causes it to de-excite to the
+ground state and to emit a photon of the same energy as the incoming
+photon. Due to the non-linear relation between intensity and the probability
+to induce stimulated emission and the shape of the depletion beam
+(Fig.~\ref{fig:STED-principle}c, center), the size of the origin of
+spontaneous emission in the center of the depletion beam is decreased. The
+wavelength of the depletion beam and thus the wavelength of stimulated
+emission is selected such that it lies outside the detection window of the
+microscope (Fig.~\ref{fig:STED-principle}c, right), which de-facto switches
+fluorophores that undergo stimulated emission to an ``off''-state.
+
+In summary, this directly yields a recording of the fluorophores with a
+resolution beyond the diffraction limit (Fig.~\ref{fig:STED-principle}d). The
+resolution provided by STED microscopy depends on the intensity $I$ of the
+depletion beam and is given by
+\begin{equation}
+  d_\text{min, STED} = \frac\lambda{2\mathrm{NA}\sqrt{I/I_\text{sat}}}\text,
+  \label{eq:resolution-STED}
+\end{equation}
+which is a modification of Abbe's original equation
+(eq.~\eqref{eq:diffraction-limit}). Here, $I_\text{sat}$ is the intensity
+required to induce stimulated emission in half of the fluorophores.  
 
 
 % The first concept to circumvent the diffraction limit was published in 1994
