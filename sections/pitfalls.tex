@@ -1,6 +1,11 @@
 \section{Potential Pitfalls}
 \label{sec:pitfalls}
 
+Combining SICM and FM or SRFM techniques leads to a variable quantity of 
+correlating data depending on the overlap of data acquired by each technique.
+Figure \ref{fig:CombinedMicroscopy} schematically illustrates implementations 
+of combined microscopes and the respective resulting correlating data. 
+
 \begin{figure}
   \sidecaption
   \includegraphics{gr/pitfalls/CombinedMicroscopy}%
@@ -13,21 +18,68 @@
   \label{fig:CombinedMicroscopy}
 \end{figure}
 
-Combining SRFM and SICM in one setup is bound to bring up some potential
-pitfalls, some of which are discussed in the following:
+A combination of SICM and wide-field microscopy techniques such as TIRF yields
+two data sets, just as any other combination would. However, before these data
+sets can be combined and examined for correlating data, it has to be ensured that 
+a data point from one set is assigned a data point from the other set. As SICM 
+can have significantly higher resolutions than wide-field microscopy, it is 
+likely that one data point from the wide-field microscopy data set is assigned 
+multiple data points from the SICM data set. To avoid this, the SICM pipette 
+could be adjusted to yield a lower resolution comparable to the wide-field 
+microscopy resolution. In case of a resolution mismatch the data sets have to be
+aligned after imaging, as wide-field microscopy is not a scanning technique and
+records all data at once instead of one another making it impossible to align the
+microscopes and thus the data recording prior to imaging. Due to the resolution
+mismatch this can prove difficult.
+
+Once the data is aligned, it can be checked for correlations. As SICM traces the 
+surface of the sample, it changes its position constantly in all 3 dimensions unless
+the sample has a very flat surface and a change in z direction is not necessary.
+In contrast, wide-field microscopy only records two dimensional data (in x and y
+directions). This means, that data points from the two different sets only truly 
+correlate, if the focus of the wide-field microscope is set to a focal plane (z)
+in the same or nearly the same z position as the SICM. To achieve this, the SICM
+should either not change its z position much, which is only reasonable for
+relatively flat samples, or SICM data from different z planes has to be discarded.
+Flat cell processes or extensions are an example for a structure, which could be 
+investigated by a such a combination.
+
+SICM and z-stacking FM techniques, when combined, yield more correlating data than
+SICM and wide-field techniques as z-stacking microscopy as this FM technique
+records data points in multiple z planes. After imaging these can be aligned with 
+the SICM data set and non-correlating data can be separated from correlating data.
+However, there is still a potential mismatch in resolution and the data has the 
+processed after imaging to yield correlation. Yet, this implementation is suitable
+for all, not only flat, samples.
+
+Implementations of SICM and surface scanning microscopy automatically solve one
+of the problems occuring when combining SICM with other FM techniques: Both 
+microscopes are scanning techniques able to change their z position from one data
+point to the next enabling an alignment before data recording. Therefore, all 
+recorded data, if aligned correctly, can be assumed to be correlating.
+
+Instead of having to worsen SICM resolution to match FM resolution, it might be 
+reasonable to combine SICM and SRFM in one setup. Though, this implementation
+comes with its own potential pitfalls, especially as due to the super resolution
+of both techniques small deviations or disturbances are sufficient to ruin the 
+alignment of the setup. Some of these potential pitfalls are discussed in the 
+following:
 
 To avoid some problems from the beginning, both the SRFM and SICM setups
 should provide spatial resolutions in the same range. Also, if possible, one
 software should be used to control both setups to prevent delays in the
-imaging process due to ... (?)
+imaging process due to transmitting information from one software to the other.
 
 Some potential pitfalls can arise when aligning the SRFM and SICM
 setups. There are two alignment options: The first one is aligning the pipette
 tip and the laser beam only in the xy plane, e.g. for imaging fluorescent
-proteins in the cytoskeleton and the cell membrane simultaneously. The second
-one is additionally aligning the tip and beam in the z plane, e.g. to image
-cell membrane and fluorescent particles or proteins within the membrane
-simultaneously, as has been done in SSCM \cite{Gorelik2002a}\cite{Shevchuk2008}.
+proteins in the cytoskeleton and the cell membrane simultaneously. This is 
+comparable, in terms of data recording, to the above mentioned combinations of
+SICM and wide-field or z-stacking microscopy. 
+The second one, surface scanning, is additionally aligning the tip and beam
+in the z plane, e.g. to image cell membrane and fluorescent particles or proteins 
+within the membrane simultaneously, as has been done in 
+SSCM \cite{Gorelik2002a}\cite{Shevchuk2008}.
 
 Especially the second option tracing the cell surface would require constant
 focal plane adjustment of the optical setup. This might eventually lead to a
@@ -35,14 +87,14 @@ mismatch in the excitation and depletion beam superimposition.
 
 It has to be put into consideration whether fine adjustment screws are enough
 to align the pipette and the beam. It is apparently sufficient for aligning
-SICM and confocal microscopes (??). In case it isn't accurate enough piezo
-elements might have to be used. However, the usage of 3 piezo elements mounted
-to the same platform, may it be the pipette holder or sample stage, is
-reported to have caused cross-talk during sample positioning leading to image
-artifacts in the range of 100 nm \cite{Shevchuk2013}. Hence, it would be
-better to uncouple xy piezos from the z piezo. Furthermore, z piezos come with
-an increased risk of piezo drift. Therefore, especially the sample stage
-should ideally avoid z piezo usage.
+SICM and confocal microscopes \cite{Gorelik2002a}\cite{Shevchuk2008}. 
+In case it isn't accurate enough piezo elements might have to be used. 
+However, the usage of 3 piezo elements mounted to the same platform, may it be
+the pipette holder or sample stage, is reported to have caused cross-talk during
+sample positioning leading to image artifacts in the range of 100 nm 
+\cite{Shevchuk2013}. Hence, it would be better to uncouple xy piezos from 
+the z piezo. Furthermore, z piezos come with an increased risk of piezo drift. 
+Therefore, especially the sample stage should ideally avoid z piezo usage.
 
 Both alignment options may lead to the pipette tip reflecting the beam and
 thereby distorting the resulting recordings. In this case the pipette tip
