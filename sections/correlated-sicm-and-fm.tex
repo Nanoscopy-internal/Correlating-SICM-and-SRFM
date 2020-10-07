@@ -5,14 +5,42 @@
 %%% TeX-master: "../manuscript"
 %%% End:
 
+% Assume a figure here which shows the different degrees of correlation
+\begin{figure}
+  \includegraphics[width=\textwidth]{gr/correlating/sicm+fm}
+  \caption{%
+    \textbf{Combining SICM and wide-field fluorescence microscopy.}
+    \textbf{a:}
+    \textbf{b:} FM image of presynaptic nerve terminals stained with
+    FM1-43. \textbf{c:} Overlay of the FM-image and two SICM recordings of the
+    same region. \textbf{d:} 3D-representation of the SICM recordings.
+    \textbf{b--d:} Reprinted with permission from ref \cite{Scheenen2015}.
+  }
+  \label{fig:sicm+fm}
+\end{figure}
+
 Correlative SICM and FM, despite the mismatch in resolution, allows to gather
 information which cannot be obtained by using a single technique
-alone. However, the degree of correlation differs, depending on the FM
-technique combined with SICM. Combining SICM and wide-field FM allows to image
-the same region of the sample, which, for example, can be used to find a
-region of interest such as an area containg synapses in a culture of a
-neuronal network \cite{Novak2013,Scheenen2015}. 
+alone. However, the degree of correlation as well as the technical
+implementation differs, depending on the FM
+technique combined with SICM.
 
+
+\subsection{Combining SICM and wide-field FM}
+\label{sec:SICM+widefield}
+Combining SICM and wide-field FM allows to image the same region of
+the sample with both techniques (Fig.~\ref{fig:sicm+fm}a). Technically, this
+combination is simple, since most implementations of SICM are built on
+inverted optical microscopes. However, due to the
+poor $z$-resolution of wide-field FM, a direct correlation of data from the
+along the optical axis, $z$, which, for example, can be used to find a region
+of interest such as an area containing synapses in a culture of a neuronal
+network \cite{Novak2013,Scheenen2015}
+(Fig.~\ref{fig:scheenen2015}). Furthermore, a combination of wide-field FM and
+SICM has been used to first identify primary cilia in a cell culture and
+subsequently use SICM to reveal whether the selected cilium was extending into
+the extracellular space or was embedded in the cell, an information which
+could not be retrieved by using FM alone \cite{Zhou2018}.
 % Den folgenden Teil verstehe ich nicht wirklich, SICM kann ja auch 3D
 % (allerdings natürlich nicht innerhalb von irgendetwas). Und irgendwie ist
 % das ja auch nicht der "Haupt"-Vorteil, sondern, dass man überhaupt
@@ -35,27 +63,16 @@ neuronal network \cite{Novak2013,Scheenen2015}.
 % technique \cite{}. A better fitting method for investigating living cells would be scanning 
 % ion conductance microscopy (SICM) \cite{Hansma1989}. 
 
-Correlative SICM and fluorescence microscopy opens up the opportunity to receive information, 
-which are hidden and impossible to obtain by using one of this microscopy techniques alone. 
-This is especially helpful for applications, where the reaction is not limited to \emph{one 
-dimension}, for example when investigating the uptake of nanoparticles into cells. There it would 
-be interesting to investigate both the cell membrane with a technique, which is able to do so -- 
-AFM \cite{Binnig1986}, EM \cite{}, SICM \cite{Hansma1989} -- and the uptake of nanoparticles into 
-cells or how the cytoskeleton react on the addition of the nanoparticle by using fluorescence 
-microscopy methods.
-
-% Den Teil brauchen wir ja vielleicht nicht. 
-AFM, a method belonging to the scanning probe microscopy techniques, was successfully
-combined to fluorescence microscopy techniques e.g. to investigate the topography of a 
-cell or a part of a cell with the cytoskeleton \cite{Laishram2009,Liu2020}. But a big problem 
-with this method is, that it is not the most favorable for investigating living cells in their
-physiological surrounding. Certain destructive effects on the cell were found by using this 
-technique \cite{You2000,Rheinlaender2011}. A better fitting method for investigating living cells 
-would be scanning ion conductance microscopy (SICM) \cite{Hansma1989}. 
-
-
 % Hier jetzt der surface confocal scanning part, NP investigation part usw. (damit warte ich aber,
 % bis ich weiß, wie das richtig eingefügt wird.
+
+% Another very delicate sample, because of their three-dimensional, upright structure are cilia.
+% Here SICM was used for investigating the topography of the cilia and the fluorescence was used to
+% distinguish between surface and sub-surface cilia, which could not be detected with SICM 
+% \cite{Zhou2018}.
+\subsection{Combining SICM and confocal FM}
+
+\subsection{Surface scanning}
 
 Topographical information obtained by SICM were successfully correlated with fluorescence signals
 of stained cytoskeleton molecules obtained by laser scanning confocal microscopy in platelets 
@@ -66,10 +83,6 @@ could be investigated with correlated SICM and confocal microscopy. With such a 
 synaptic boutons could be identified \cite{Novak2013} or the topography could be correlated with 
 the distribution (nicht das richtige Wort!?) of the mitochondria \cite{Takahashi2019}. 
 
-Another very delicate sample, because of their three-dimensional, upright structure are cilia.
-Here SICM was used for investigating the topography of the cilia and the fluorescence was used to
-distinguish between surface and sub-surface cilia, which could not be detected with SICM 
-\cite{Zhou2018}.
 
 Scanning surface confocal microscopy (SSCM) was a combination of scanning ion conductance and a 
 scanning confocal microscopy \cite{Gorelik2002}. The topography and fluorescence were measured
