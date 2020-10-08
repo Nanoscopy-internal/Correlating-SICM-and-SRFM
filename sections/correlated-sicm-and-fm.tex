@@ -13,7 +13,8 @@
     \textbf{a:}
     \textbf{b:} FM image of presynaptic nerve terminals stained with
     FM1-43. \textbf{c:} Overlay of the FM-image and two SICM recordings of the
-    same region. \textbf{d:} 3D-representation of the SICM recordings.
+    same region. \textbf{d:} 3D-representation of the lower right SICM
+    recording from c.
     \textbf{b--d:} Reprinted with permission from ref \cite{Scheenen2015}.
   }
   \label{fig:sicm+fm}
@@ -22,25 +23,34 @@
 Correlative SICM and FM, despite the mismatch in resolution, allows to gather
 information which cannot be obtained by using a single technique
 alone. However, the degree of correlation as well as the technical
-implementation differs, depending on the FM
-technique combined with SICM.
+implementation differs, depending on the FM technique combined with SICM, as
+we will detail in the following sections.
+
+Although recording SICM and FM data independently on different samples under
+the same conditions can support conclusions that could not be drawn from data
+from a single technique alone \cite{Gesper2017,Lee2013,Lyon2009}, we will
+focus on applications were SICM and FM data has been recorded from the same
+sample.
 
 
 \subsection{Combining SICM and wide-field FM}
 \label{sec:SICM+widefield}
-Combining SICM and wide-field FM allows to image the same region of
-the sample with both techniques (Fig.~\ref{fig:sicm+fm}a). Technically, this
-combination is simple, since most implementations of SICM are built on
-inverted optical microscopes. However, due to the
-poor $z$-resolution of wide-field FM, a direct correlation of data from the
-along the optical axis, $z$, which, for example, can be used to find a region
-of interest such as an area containing synapses in a culture of a neuronal
-network \cite{Novak2013,Scheenen2015}
-(Fig.~\ref{fig:scheenen2015}). Furthermore, a combination of wide-field FM and
-SICM has been used to first identify primary cilia in a cell culture and
-subsequently use SICM to reveal whether the selected cilium was extending into
-the extracellular space or was embedded in the cell, an information which
-could not be retrieved by using FM alone \cite{Zhou2018}.
+Combining SICM and wide-field FM allows to image the same region of the sample
+with both techniques (Fig.~\ref{fig:sicm+fm}a). Due to the different fields of
+view, the different pixel sizes and the different times required to record one
+image, the two data sets are not recorded synchronously and thus cannot by
+correlated pixel-by-pixel.  Technically, the combination is simple, since
+the SICM only has to be mounted onto an inverted optical FM and both
+instruments can be controlled independently by their own software.
+
+So far, the combination of SICM and wide-field FM has been used to find a
+region of interest such as an area containing active synapses in a culture of
+a neuronal network \cite{Novak2013,Scheenen2015}
+(Fig.~\ref{fig:sicm+fm}b--d). Furthermore, it has been used to first identify
+primary cilia in a cell culture and subsequently use SICM to reveal whether
+the selected cilium was extending into the extracellular space or was embedded
+in the cell, an information which could not be retrieved by using FM alone
+\cite{Zhou2018}.
 % Den folgenden Teil verstehe ich nicht wirklich, SICM kann ja auch 3D
 % (allerdings natürlich nicht innerhalb von irgendetwas). Und irgendwie ist
 % das ja auch nicht der "Haupt"-Vorteil, sondern, dass man überhaupt
