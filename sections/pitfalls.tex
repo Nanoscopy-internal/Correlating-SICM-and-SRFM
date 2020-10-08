@@ -1,62 +1,62 @@
 \section{Potential Pitfalls}
 \label{sec:pitfalls}
 
-Combining SICM and FM or SRFM techniques leads to a variable quantity of 
-correlating data depending on the overlap of data acquired by each technique.
-Figure \ref{fig:CombinedMicroscopy} schematically illustrates implementations 
-of combined microscopes and the respective resulting correlating data. 
-
-\begin{figure}
-  \sidecaption
-  \includegraphics{gr/pitfalls/CombinedMicroscopy}%
-  \caption{\textbf{Potential implementations of combined SICM and FM.} 
-  			\textit{Left:} Schematic depiction of potential combined SICM 
-  			and TIRF or standard wide-field microscopy (\textit{top}),
-  			SICM and z-stacking (\textit{middle}) and SICM and surface
-  			scanning (\textit{bottom}). 
-  			\textit{Right:} Resulting correlating data of these combinations.}
-  \label{fig:CombinedMicroscopy}
-\end{figure}
-
-A combination of SICM and wide-field microscopy techniques such as TIRF yields
-two data sets, just as any other combination would. However, before these data
-sets can be combined and examined for correlating data, it has to be ensured that 
-a data point from one set is assigned a data point from the other set. As SICM 
-can have significantly higher resolutions than wide-field microscopy, it is 
-likely that one data point from the wide-field microscopy data set is assigned 
-multiple data points from the SICM data set. To avoid this, the SICM pipette 
-could be adjusted to yield a lower resolution comparable to the wide-field 
-microscopy resolution. In case of a resolution mismatch the data sets have to be
-aligned after imaging, as wide-field microscopy is not a scanning technique and
-records all data at once instead of one another making it impossible to align the
-microscopes and thus the data recording prior to imaging. Due to the resolution
-mismatch this can prove difficult.
-
-Once the data is aligned, it can be checked for correlations. As SICM traces the 
-surface of the sample, it changes its position constantly in all 3 dimensions unless
-the sample has a very flat surface and a change in z direction is not necessary.
-In contrast, wide-field microscopy only records two dimensional data (in x and y
-directions). This means, that data points from the two different sets only truly 
-correlate, if the focus of the wide-field microscope is set to a focal plane (z)
-in the same or nearly the same z position as the SICM. To achieve this, the SICM
-should either not change its z position much, which is only reasonable for
-relatively flat samples, or SICM data from different z planes has to be discarded.
-Flat cell processes or extensions are an example for a structure, which could be 
-investigated by a such a combination.
-
-SICM and z-stacking FM techniques, when combined, yield more correlating data than
-SICM and wide-field techniques as z-stacking microscopy as this FM technique
-records data points in multiple z planes. After imaging these can be aligned with 
-the SICM data set and non-correlating data can be separated from correlating data.
-However, there is still a potential mismatch in resolution and the data has the 
-processed after imaging to yield correlation. Yet, this implementation is suitable
-for all, not only flat, samples.
-
-Implementations of SICM and surface scanning microscopy automatically solve one
-of the problems occuring when combining SICM with other FM techniques: Both 
-microscopes are scanning techniques able to change their z position from one data
-point to the next enabling an alignment before data recording. Therefore, all 
-recorded data, if aligned correctly, can be assumed to be correlating.
+%Combining SICM and FM or SRFM techniques leads to a variable quantity of 
+%correlating data depending on the overlap of data acquired by each technique.
+%Figure \ref{fig:CombinedMicroscopy} schematically illustrates implementations 
+%of combined microscopes and the respective resulting correlating data. 
+%
+%\begin{figure}
+%  \sidecaption
+%  \includegraphics{gr/pitfalls/CombinedMicroscopy}%
+%  \caption{\textbf{Potential implementations of combined SICM and FM.} 
+%  			\textit{Left:} Schematic depiction of potential combined SICM 
+%  			and TIRF or standard wide-field microscopy (\textit{top}),
+%  			SICM and z-stacking (\textit{middle}) and SICM and surface
+%  			scanning (\textit{bottom}). 
+%  			\textit{Right:} Resulting correlating data of these combinations.}
+%  \label{fig:CombinedMicroscopy}
+%\end{figure}
+%
+%A combination of SICM and wide-field microscopy techniques such as TIRF yields
+%two data sets, just as any other combination would. However, before these data
+%sets can be combined and examined for correlating data, it has to be ensured that 
+%a data point from one set is assigned a data point from the other set. As SICM 
+%can have significantly higher resolutions than wide-field microscopy, it is 
+%likely that one data point from the wide-field microscopy data set is assigned 
+%multiple data points from the SICM data set. To avoid this, the SICM pipette 
+%could be adjusted to yield a lower resolution comparable to the wide-field 
+%microscopy resolution. In case of a resolution mismatch the data sets have to be
+%aligned after imaging, as wide-field microscopy is not a scanning technique and
+%records all data at once instead of one another making it impossible to align the
+%microscopes and thus the data recording prior to imaging. Due to the resolution
+%mismatch this can prove difficult.
+%
+%Once the data is aligned, it can be checked for correlations. As SICM traces the 
+%surface of the sample, it changes its position constantly in all 3 dimensions unless
+%the sample has a very flat surface and a change in z direction is not necessary.
+%In contrast, wide-field microscopy only records two dimensional data (in x and y
+%directions). This means, that data points from the two different sets only truly 
+%correlate, if the focus of the wide-field microscope is set to a focal plane (z)
+%in the same or nearly the same z position as the SICM. To achieve this, the SICM
+%should either not change its z position much, which is only reasonable for
+%relatively flat samples, or SICM data from different z planes has to be discarded.
+%Flat cell processes or extensions are an example for a structure, which could be 
+%investigated by a such a combination.
+%
+%SICM and z-stacking FM techniques, when combined, yield more correlating data than
+%SICM and wide-field techniques as z-stacking microscopy as this FM technique
+%records data points in multiple z planes. After imaging these can be aligned with 
+%the SICM data set and non-correlating data can be separated from correlating data.
+%However, there is still a potential mismatch in resolution and the data has the 
+%processed after imaging to yield correlation. Yet, this implementation is suitable
+%for all, not only flat, samples.
+%
+%Implementations of SICM and surface scanning microscopy automatically solve one
+%of the problems occuring when combining SICM with other FM techniques: Both 
+%microscopes are scanning techniques able to change their z position from one data
+%point to the next enabling an alignment before data recording. Therefore, all 
+%recorded data, if aligned correctly, can be assumed to be correlating.
 
 Instead of having to worsen SICM resolution to match FM resolution, it might be 
 reasonable to combine SICM and SRFM in one setup. Though, this implementation
