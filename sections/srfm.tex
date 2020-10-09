@@ -23,31 +23,26 @@ photon.
   \includegraphics{gr/intro/Jablonski-fluorescence}
   
   \caption{%
-    \textbf{Principle of fluorescence microscopy.}
-    \textbf{a:}
-      Jablonski diagram of fluorescence. A photon of energy
-      $h\nu_\text{ex}$ gets absorbed and excites the molecule from its
-      electronic ground state $S_0$ to a vibrational excited state of the
-      electronic state $S_1$ (green arrow). After radiation-less relaxation
-      (black arrow) into the vibrational ground state of $S_1$, the molecule
-      returns to any vibrational state of $S_0$ (red arrow) by emitting a photon
-      of energy $h\nu_\text{em}$, after which it relaxes to the lowest
-      vibrational state of $S_0$.
-    \textbf{b:}
-      Typical absorbance (green) and
-      emission (red) spectra of a fluorescent dye molecule. Green and red
-      rectangles indicate the wavelength range used for excitation (exc) and
-      detection.
-  }
+    \textbf{Principle of fluorescence microscopy.}  \textbf{a:} Jablonski
+    diagram of fluorescence. A photon of energy $h\nu_\text{ex}$ gets absorbed
+    and excites the molecule from its electronic ground state $S_0$ to a
+    vibrational excited state of the electronic state $S_1$ (green
+    arrow). After radiation-less relaxation (black arrow) into the vibrational
+    ground state of $S_1$, the molecule returns to one of the vibrational
+    states of $S_0$ (red arrow) by emitting a photon of energy
+    $h\nu_\text{em}$, after which it relaxes to the lowest vibrational state
+    of $S_0$.  \textbf{b:} Typical absorbance (green) and emission (red)
+    spectra of a fluorescent dye molecule. Green and red rectangles indicate
+    the wavelength range used for excitation (exc) and detection in FM.  }
   \label{fig:jablonski-fluorescence}
 \end{figure}
 
 Typical absorbance/emission spectra of fluorophores used as dyes in FM are
 shown in Fig.~\ref{fig:jablonski-fluorescence}b. In FM, a single wavelength or
-a wavelength range (green rectangle Fig.~\ref{fig:jablonski-fluorescence}b) in
-suitable to excite the fluorophore used is chosen, by using a suitable laser
+a wavelength range (green rectangle in Fig.~\ref{fig:jablonski-fluorescence}b) 
+suitable to excite the fluorophore used is chosen -- by using a suitable laser
 or LED or by selecting the wavelength range via a band-pass filter from a
-white light source and send through the objective lens of the microscope to
+white light source -- and send through the objective lens of the microscope to
 the sample. In most FMs (the so called epifluorescence microscopes), the
 emission is collected via the same objective lens. Since the emission is
 red-shifted with respect to the excitation wavelength, the emitted photons
@@ -73,7 +68,7 @@ excitation and emission, but their implementations differ in the way how the
 sample is excited and how the emission is recorded. The beam paths and the
 major components of a wide-field and a confocal FM are depicted in
 Fig.~\ref{fig:FM-setups}. In a wide-field FM (Fig.~\ref{fig:FM-setups}a), the
-entire sample is excited at the same time, and all fluorophores in the sample
+entire sample is illuminated at the same time, and all fluorophores in the sample
 emit at the same time (yellow circles in the right inset in
 Fig.~\ref{fig:FM-setups}a). The emission of the fluorophores (solid red shape
 in Fig.~\ref{fig:FM-setups}a, only five beam paths are shown for clarity) is
@@ -83,14 +78,14 @@ onto the camera, which records an image of the emission of all fluorophores at
 the same time.
 
 Each fluorophore in the sample generates a diffraction limited spot on the
-camera, and spots which are not separated in space by at least the diffraction
+camera, and spots which are not separated in space by at least the diffraction limit
 cannot be distinguished as single spots. Thus, the wavelength which determines
 the resolution in a wide-field microscope is the wavelength $\lambda_\text{em}$
 of the emission.
 
 The major disadvantage of a wide-field microscope is that the sample is not
-only illuminated evenly in the focal plane of the objective lens, but also
-fluorophores outside the focal plane in $z$-direction are excited and their
+only illuminated in the focal plane of the objective lens, but also
+fluorophores above and below the focal plane are excited and their
 emission is collected (not shown for clarity). Since they are not located in
 the focal plane of the objective lens, their emission does not result in a
 sharp spot on the camera, but instead appears as a blurred background.    
@@ -98,8 +93,8 @@ sharp spot on the camera, but instead appears as a blurred background.
 This led to the invention of the confocal microscope
 \cite{Heimstaedt1911,Minsky1988}. The beam path of a confocal microscope is
 shown in Fig.~\ref{fig:FM-setups}b. Here, the excitation light (green solid
-shape) is focused into the sample by the objective lens and only the
-fluorophores within the diffraction limited spot are excited. Thus, the
+shape) is focused onto the sample by the objective lens and only the
+fluorophores within the resulting diffraction limited spot are excited. Thus, the
 wavelength which determines the resolution of a confocal microscope is the
 excitation wavelength $\lambda_\text{ex}$.  In contrast to the wide-field
 microscope, the emission of the fluorophores is focused onto a pinhole which
@@ -111,6 +106,12 @@ pixel. Fig.~\ref{fig:FM-setups}c illustrates the major effect of the pinhole:
 Emission from out-of-focus planes (dotted and dashed lines) is blocked by the
 pinhole since it is located in the same focal plane as the sample (thus the
 name \emph{confocal}). 
+
+For a potential combination with SICM, the most important aspect of the two
+techniques is the way the fluorescence is recorded. Wide-field FM uses a 
+camera to record the entire sample at once, whereas confocal FM is a scanning
+technique which records the single pixels subsequently, either by moving the
+sample through the beam or vice versa.
 
 \subsection{Circumventing the diffraction limit}
 \label{sec:circumvent-diffraction-limit}
@@ -242,15 +243,15 @@ by the depletion beam and undergo stimulated emission (black dots). The
 Jablonski diagram of stimulated emission is shown in
 Fig.~\ref{fig:STED-principle}c (left). An incoming photon of the depletion
 beam interacts with the excited fluorophore and causes it to de-excite to the
-ground state and to emit a photon of the same energy as the incoming
+ground state and to emit a second photon of the same energy as the incoming
 photon. Due to the non-linear relation between intensity and the probability
 to induce stimulated emission and the shape of the depletion beam
 (Fig.~\ref{fig:STED-principle}c, center), the size of the origin of
 spontaneous emission in the center of the depletion beam is decreased. The
 wavelength of the depletion beam and thus the wavelength of stimulated
-emission is selected such that it lies outside the detection window of the
+emission is selected such that it is outside the detection window of the
 microscope (Fig.~\ref{fig:STED-principle}c, right), which de-facto switches
-fluorophores that undergo stimulated emission to an ``off''-state.
+fluorophores that undergo stimulated emission to an invisible ``off''-state.
 
 In summary, this directly yields a recording of the fluorophores with a
 resolution beyond the diffraction limit (Fig.~\ref{fig:STED-principle}d). The
@@ -266,7 +267,15 @@ required to induce stimulated emission in half of the fluorophores.
 
 The best resolution (approximately 2\,nm) obtained by STED microscopy has
 been recorded on samples containing fluorescent color centers in diamond
-crystal \cite{Wildanger2012}.
+crystal \cite{Wildanger2012}. Note that, by applying a depletion beam of a
+different shape, STED microscopy allows to improve the resolution along the
+optical axis \cite{Wildanger2009}. A large number of reviews articles exist
+which summarize the use of STED (or in general, RESOLFT) microscopy in different
+fields in the life sciences, much too much to be listed here. We would like to
+refer the reader to exhaustive reviews, which, besides
+reviewing various applications, detail technical aspects of STED microscopy
+\cite{Turkowyd2016,Blom2017} as well as to a review which contains some
+anecdotal sections on how STED was developed \cite{Sahl2019}.
 
 
 % The first concept to circumvent the diffraction limit was published in 1994
