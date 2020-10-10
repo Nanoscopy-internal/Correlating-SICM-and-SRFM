@@ -83,6 +83,35 @@ in the cell, an information which could not be retrieved by using FM alone
 % \cite{Zhou2018}.
 \subsection{Combining SICM and confocal FM}
 
+\begin{figure}
+  \includegraphics[width=\textwidth]{gr/correlating/sicm+cfm}
+  \caption{%
+    \textbf{Combining SICM and confocal fluorescence microscopy.}
+    \textbf{a:}
+    \textbf{b:} 
+    Reprinted with permission from ref \cite{}.
+  }
+  \label{fig:sicm+cfm}
+\end{figure}
+
+Similar to a SICM and wide-field combination, a combination of SICM and confocal FM enables
+imaging of the same region and sample with both techniques (Fig.~\ref{fig:sicm+cfm}a). The technical
+implementation involves only mounting a SICM onto an inverted confocal FM. The software used to
+control the two microscopes does not have to the same as both microscope record data independently 
+from one another. However, as the recordings are not simultaneously pixel-by-pixel correlation is hardly,
+if at all, possible. Yet, a combination of SICM and z-stacking confocal FM yields more correlating data
+than combinations of SICM and wide-field techniques: z-stacking microscopy records data points in 
+multiple z planes. After imaging these can be aligned with the SICM data and non-correlating data can be
+separated from correlating data. Still, there is a potential mismatch in resolution and the data has to 
+be processed after imaging to yield correlation. Yet, this implementation is suitable for all, not only 
+flat, fixed samples.
+
+SICM and confocal FM has been combined for the first time by Korchev et al \cite{Korchev2000} in
+2000. The group used this combination to verify the volume measurements obtained by SICM. Just a 
+year later, further development of this combination enabled simultaneous acqusition of Ca^{2+} 
+imaging and topography data \cite{Shevchuk2001}. Afterwards, many different studies using a combination
+of SICM and confocal FM have been published:
+
 Topographical information obtained by SICM were successfully correlated with fluorescence signals
 of stained cytoskeleton molecules obtained by laser scanning confocal microscopy in platelets 
 \cite{Seifert2017}. 
