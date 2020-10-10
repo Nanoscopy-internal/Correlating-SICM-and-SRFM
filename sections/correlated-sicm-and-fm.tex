@@ -87,39 +87,43 @@ in the cell, an information which could not be retrieved by using FM alone
   \includegraphics[width=\textwidth]{gr/correlating/sicm+cfm}
   \caption{%
     \textbf{Combining SICM and confocal fluorescence microscopy.}
-    \textbf{a:}
+    \textbf{a:} Schematic illustration of the correlating data acquired by combining SICM and confocal FM.
     \textbf{b:} 
-    Reprinted with permission from ref \cite{}.
+    	\textit{Left:} Topography of a neuronal network.
+    	\textit{Middle:} Fluorescence of the same neuronal network as depicted on the left.
+    	\textit{Right:} Overlay of topography and fluorescence of two regions of interest (ROI 1, ROI 2) from
+    	the left and middle image.
+    Reprinted with permission from ref \cite{Novak2013}.
   }
   \label{fig:sicm+cfm}
 \end{figure}
 
 Similar to a SICM and wide-field combination, a combination of SICM and confocal FM enables
 imaging of the same region and sample with both techniques (Fig.~\ref{fig:sicm+cfm}a). The technical
-implementation involves only mounting a SICM onto an inverted confocal FM. The software used to
+implementation involves mounting a SICM onto an inverted confocal FM. The software used to
 control the two microscopes does not have to the same as both microscope record data independently 
-from one another. However, as the recordings are not simultaneously pixel-by-pixel correlation is hardly,
+from one another. However, as the recordings are not simultaneous, pixel-by-pixel correlation is hardly,
 if at all, possible. Yet, a combination of SICM and z-stacking confocal FM yields more correlating data
-than combinations of SICM and wide-field techniques: z-stacking microscopy records data points in 
-multiple z planes. After imaging these can be aligned with the SICM data and non-correlating data can be
+than combinations of SICM and wide-field techniques as z-stacking microscopy records data points in 
+multiple z planes. After imaging, these can be aligned with the SICM data and non-correlating data can be
 separated from correlating data. Still, there is a potential mismatch in resolution and the data has to 
 be processed after imaging to yield correlation. Yet, this implementation is suitable for all, not only 
 flat, fixed samples.
 
-SICM and confocal FM has been combined for the first time by Korchev et al \cite{Korchev2000} in
+SICM and confocal FM have been combined for the first time by Korchev et al \cite{Korchev2000} in
 2000. The group used this combination to verify the volume measurements obtained by SICM. Just a 
 year later, further development of this combination enabled simultaneous acqusition of Ca^{2+} 
 imaging and topography data \cite{Shevchuk2001}. Afterwards, many different studies using a combination
-of SICM and confocal FM have been published:
+of SICM and confocal FM were published:
 
-Topographical information obtained by SICM were successfully correlated with fluorescence signals
+Topographical information obtained by SICM was successfully correlated with fluorescence signals
 of stained cytoskeleton molecules obtained by laser scanning confocal microscopy in platelets 
 \cite{Seifert2017}. 
 
-In addition, hippocampal neurons, which were very delicate samples with many little protrusions, 
+In addition, hippocampal neurons, which are very delicate samples with many little protrusions, 
 could be investigated with correlated SICM and confocal microscopy. With such a combination active
-synaptic boutons could be identified \cite{Novak2013} or the topography could be correlated with 
-the distribution (nicht das richtige Wort!?) of the mitochondria \cite{Takahashi2019}.
+synaptic boutons could be identified \cite{Novak2013} (Fig.~\ref{fig:sicm+cfm}b) and topographical changes
+in dendrites were correlated to FM data of mitochondria-containing dendrite regions \cite{Takahashi2019}.
 
 In a study investigating the formation of human immunodeficiency virus (HIV) virus-like particles 
 (VLPs) the correlated SICM-fluorescence confocal microscopy (SICM-FCM) was used to investigate 
