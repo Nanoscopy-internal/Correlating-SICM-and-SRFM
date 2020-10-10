@@ -120,47 +120,107 @@ images \cite{Nashimoto2015}.
 
 \subsection{Surface scanning}
 
-%work in progress / noch nicht fertig
-Scanning surface confocal microscopy (SSCM) \cite{Gorelik2002} is a combination of SICM and confocal 
-microscopy tracking the sample surface. This combination enables simultaneous SICM and FM imaging of
+Scanning surface confocal microscopy (SSCM) \cite{Gorelik2002} is a combination of SICM and scanning
+confocal microscopy (SCM). This combination enables simultaneous SICM and FM imaging of
 the same region, in this case the surface, of the same sample at the same time. To achieve matching
 field of views, pixel sizes and recording times consequentially yielding two correlating data sets,
 two slightly different setups are imaginable and have been put to the test (see figure 
-\ref{fig:sicm+sscm_setup}) \cite{Gorelik2002}\cite{Shevchuk2013}.
+\ref{fig:sscm_setup}) \cite{Gorelik2002}\cite{Shevchuk2013}.
+
 \begin{figure}
-%  \includegraphics[width=\textwidth]{gr/correlating/sicm+sscm_setup}
+  \includegraphics[width=\textwidth]{gr/correlating/sscm_setup}
+
   \caption{%
-    \textbf{Two possible setups for a combined SIC and SSC microscope.}
-    \textbf{a: Diagram of the combined setup with a xyz sample scan.}
-    \textbf{b: Diagram of the combined setup with a xy sample scan and a z probe scan.} 
+    \textbf{Two possible setups for a SSC microscope.}
+    \textbf{a:} Diagram of the combined setup with a xyz sample scan.
+    \textbf{b:} Diagram of the combined setup with a xy sample scan and a z probe and objective scan. 
     Reprinted with permission from ref \cite{Shevchuk2013}.
   }
-  \label{fig:sicm+sscm_setup}
+  \label{fig:sscm_setup}
 \end{figure}
 
+The first setup (figure \ref{fig:sscm_setup}a), basically an inverted SIC microscope, holds the 
+SICM probe at a fixed position. The focus of the confocal FM objective is adjusted to the tip of SICM 
+probe for vertical alignment. To achieve lateral alignment of probe and pinhole mechanical 
+micromanipulators are used. Once the setup is aligned, the sample stage moves the sample in all three 
+dimensions (xyz) for imaging.
+
+The second setup (figure \ref{fig:sscm_setup}b) is almost identical to the first with just one 
+alteration: the sample stage only moves in xy dimensions while objective and probe have been equipped 
+with an extra piezo element to enable movement in z direction. Thus, instead of moving the sample in
+all three dimensions, it is only moved in x and y directions, while probe and objective, controlled by
+the same software, simultaneously move in z direction. 
+
+According to \cite{Shevchuk2013}, this change allows for faster scan rates as the resonant frequency
+of the 3D piezo-actuator acted as a limiting factor. Additionally, usage of three piezo-elements on the
+same platform lead to cross-talk and consequentially artefacts in the SICM data.
+
+Both setups keep the probe-objective distance constant and enable the acquisition of a fluorescence
+image and a topography of the sample surface in the same scan. Photobleaching is equalized for every
+point of the sample allowing quantitative analysis of the FM data.
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{gr/correlating/sicm+scm}
+  \caption{%
+    \textbf{Combining SICM and SCM.}
+    \textbf{a:} Schematic illustration of the correlating data acquired by SSCM.
+    \textbf{b:} Simultaneously acquired topographic and fluorescence data of fluorescent Cy3-labeled 
+    VLPs adsorbed to the surface of COS 7 cells. Reprinted with permission from ref \cite{Gorelik2002}.
+    \textbf{c:} SSCM recordings of fixed clathrin-GFP transfected Cos-7 cells. 
+    	\textit{Left:} Cell surface topography. 
+    	\textit{Middle:} Fluorescence recording of the cell shown left. 
+    	\textit{Right:} 3D overlay of topographical and fluorescent recordings. 
+    Reprinted with permission from ref \cite{Shevchuk2008}.
+    \textbf{d:} Live COS 7 cells sequentially scanned by SSCM. Overlays of simmultaneously obtained 
+    topographic and fluorescence scans. Fluorescence imaging was started 2 h 17 min after the first 
+    SICM scan as indicated by the red star. Fluorescent VLPs were added at 2 h 40 min. 
+    Reprinted with permission from ref \cite{Gorelik2002}.
+  }
+  \label{fig:sicm+scm}
+\end{figure}
+
+As the SICM and SCM data sets are recorded simultaneously, all data points immediately have a
+corresponding data point in the other set. This immediate correlation, schematically illustrated in
+figure \ref{fig:sicm+scm}a, allows not only for correlating studies in fixed samples (figure 
+\ref{fig:sicm+scm}c), but also studies of dynamics in live samples (figure \ref{fig:sicm+scm}d).
+
+To highlight the versatility of SSCM, here are some examples: SSCM has been used for investigating the
+dynamics of the interaction of Cy3-labeled polyoma virus-like particles (VLPs) with Cos-7 cells 
+(figure \ref{fig:sicm+scm}b,d), for the investigating the uptake of fluorescent nanoparticles in 
+immortalized human alveolar epithelial type 1 (AT1) cells and AT2 cells \cite{Kemp2008} and for 
+investigating the differentiation of stem cells \cite{Gorelik2008}. Furthermore, it has been utilized
+in studies investigating endocytotic pathways \cite{Shevchuk2008} (figure \ref{fig:sicm+scm}c) and in
+a study investigating an alternative closing mechanism for clathrin-coated pits (CCPs) by recording 
+topography simultaneously with the fluorescence of actin-binding protein-green fluorescent protein 
+(Abp1-GFP) and clathrin light-chain-enhanced green fluorescent protein (Clc-EGFP) \cite{Shevchuk2012}.
+In another study the uptake of 200~nm fluorescent, carboxylated latex particles into immortalized human
+alveolar epithelial type 1-like (AT1) cells was investigated by SSCM \cite{Novak2014}. 
 
 
-Scanning surface confocal microscopy (SSCM) was a combination of scanning ion conductance and a 
-scanning confocal microscopy \cite{Gorelik2002}. The topography and fluorescence were measured
-simultaneously and -- because fluorescence signals should be investigated, which were originated
-from particles at or near to the surface of the cell -- it was important to keep the distance 
-between the sample and the pipette constant. In that study the SSCM was used for investigating the 
-dynamics of the interaction of Cy3-labeled polyoma virus-like particles (VLPs) with Cos-7 cells. 
-The SSCM could also be used for the investigation of the uptake of fluorescent nanoparticles 
-(50~nm and 1~{\textmu}m) in immortalized human alveolar epithelial type 1 (AT1) cells and AT2 
-cells \cite{Kemp2008} or for investigating the differentiation of stem cells \cite{Gorelik2008}.
+%Anmerkung: Habe die folgenden Paragraphen versucht in oberen Text einzubauen und deshalb hier 
+%auskommentiert.
 
-SSCM could be also used for investigating endocytotic pathways \cite{Shevchuk2008}. In a study 
-investigating topography together with actin-binding protein-green fluorescent protein (Abp1-GFP)
-and clathrin light-chain-enhanced green fluorescent protein (Clc-EGFP) an alternative closing 
-mechanism for clathrin-coated pits (CCPs) \cite{Shevchuk2012}. In another study the uptake of
-200~nm fluorescent, carboxylated latex particles into immortalized human alveolar epithelial type
-1-like (AT1) cells was investigated. Additional to the fluorescence signal of the nanoparticle the 
-fluorescence signal of actin-binding protein-green fluorescent protein (Abp1-GFP) and clathrin
-light-chain-enhanced green fluorescent protein (Clc-EGFP) were detected. Both, actin, as part of
-the cytoskeleton (Quelle), and clathrin, as one important actor of endocytosis (Quelle), give 
-interesting Zusatzinformationen on how the nanoparticle is taken up into the cell 
-\cite{Novak2014}. 
+%Scanning surface confocal microscopy (SSCM) was a combination of scanning ion conductance and a 
+%scanning confocal microscopy \cite{Gorelik2002}. The topography and fluorescence were measured
+%simultaneously and -- because fluorescence signals should be investigated, which were originated
+%from particles at or near to the surface of the cell -- it was important to keep the distance 
+%between the sample and the pipette constant. In that study the SSCM was used for investigating the 
+%dynamics of the interaction of Cy3-labeled polyoma virus-like particles (VLPs) with Cos-7 cells. 
+%The SSCM could also be used for the investigation of the uptake of fluorescent nanoparticles 
+%(50~nm and 1~{\textmu}m) in immortalized human alveolar epithelial type 1 (AT1) cells and AT2 
+%cells \cite{Kemp2008} or for investigating the differentiation of stem cells \cite{Gorelik2008}.
+%
+%SSCM could be also used for investigating endocytotic pathways \cite{Shevchuk2008}. In a study 
+%investigating topography together with actin-binding protein-green fluorescent protein (Abp1-GFP)
+%and clathrin light-chain-enhanced green fluorescent protein (Clc-EGFP) an alternative closing 
+%mechanism for clathrin-coated pits (CCPs) \cite{Shevchuk2012}. In another study the uptake of
+%200~nm fluorescent, carboxylated latex particles into immortalized human alveolar epithelial type
+%1-like (AT1) cells was investigated. Additional to the fluorescence signal of the nanoparticle the 
+%fluorescence signal of actin-binding protein-green fluorescent protein (Abp1-GFP) and clathrin
+%light-chain-enhanced green fluorescent protein (Clc-EGFP) were detected. Both, actin, as part of
+%the cytoskeleton (Quelle), and clathrin, as one important actor of endocytosis (Quelle), give 
+%interesting Zusatzinformationen on how the nanoparticle is taken up into the cell 
+%\cite{Novak2014}. 
 
 \subsection{Nanoinjection of fluorescently labeled molecules}
 
