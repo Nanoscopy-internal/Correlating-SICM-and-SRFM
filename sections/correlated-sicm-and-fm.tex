@@ -45,12 +45,14 @@ instruments can be controlled independently by their own software.
 
 So far, the combination of SICM and wide-field FM has been used to find a
 region of interest such as an area containing active synapses in a culture of
-a neuronal network \cite{Novak2013,Scheenen2015}
-(Fig.~\ref{fig:sicm+fm}b--d). Furthermore, it has been used to first identify
-primary cilia in a cell culture and subsequently use SICM to reveal whether
-the selected cilium was extending into the extracellular space or was embedded
-in the cell, an information which could not be retrieved by using FM alone
-\cite{Zhou2018}.
+a neuronal network \cite{Scheenen2015} (Fig.~\ref{fig:sicm+fm}b--d) or to
+identify the neuron which had been investigated by SICM-guided patch-clamp of
+synaptic boutons \cite{Novak2013}.
+
+Furthermore, it has been used to first identify primary cilia in a cell
+culture and subsequently use SICM to reveal whether the selected cilium was
+extending into the extracellular space or was embedded in the cell, an
+information which could not be retrieved by using FM alone \cite{Zhou2018}.
 
 % Den folgenden Teil verstehe ich nicht wirklich, SICM kann ja auch 3D
 % (allerdings natürlich nicht innerhalb von irgendetwas). Und irgendwie ist
@@ -98,41 +100,59 @@ in the cell, an information which could not be retrieved by using FM alone
   \label{fig:sicm+cfm}
 \end{figure}
 
-Similar to a SICM and wide-field combination, a combination of SICM and confocal FM enables
-imaging of the same region and sample with both techniques (Fig.~\ref{fig:sicm+cfm}a). The technical
-implementation involves mounting a SICM onto an inverted confocal FM. The software used to
-control the two microscopes does not have to the same as both microscope record data independently 
-from one another. However, as the recordings are not simultaneous, pixel-by-pixel correlation is hardly,
-if at all, possible. Yet, a combination of SICM and z-stacking confocal FM yields more correlating data
-than combinations of SICM and wide-field techniques as z-stacking microscopy records data points in 
-multiple z planes. After imaging, these can be aligned with the SICM data and non-correlating data can be
-separated from correlating data. Still, there is a potential mismatch in resolution and the data has to 
-be processed after imaging to yield correlation. Yet, this implementation is suitable for all, not only 
-flat, fixed samples.
+Similar to a SICM and wide-field combination, a combination of SICM and
+confocal FM enables imaging of the same region and sample with both techniques
+(Fig.~\ref{fig:sicm+cfm}a). The technical implementation involves mounting a
+SICM onto an inverted confocal FM. The software used to control the two
+microscopes does not have to be the same as both microscopes record data
+independently from one another. However, as the recordings are not
+simultaneous, pixel-by-pixel correlation is hardly, if at all, possible.
 
-SICM and confocal FM have been combined for the first time by Korchev et al \cite{Korchev2000} in
-2000. The group used this combination to verify the volume measurements obtained by SICM. Just a 
-year later, further development of this combination enabled simultaneous acqusition of Ca^{2+} 
-imaging and topography data \cite{Shevchuk2001}. Afterwards, many different studies using a combination
-of SICM and confocal FM were published:
+Yet,
+a combination of SICM and $z$-stacking confocal FM yields more correlating
+data than combinations of SICM and wide-field techniques as $z$-stacking
+microscopy records data points in multiple $z$ planes. After imaging, these can
+be aligned with the SICM data and non-correlating data can be separated from
+correlating data. Still, there is a potential mismatch in resolution and the
+data has to be processed after imaging to yield correlation. Yet, this
+implementation is suitable for all, not only flat, fixed samples.
 
-Topographical information obtained by SICM was successfully correlated with fluorescence signals
-of stained cytoskeleton molecules obtained by laser scanning confocal microscopy in platelets 
-\cite{Seifert2017}. 
+SICM and confocal FM have been combined for the first time by Korchev et al.
+\cite{Korchev2000} in 2000. The group used this combination to verify the
+volume measurements obtained by SICM. Just a year later, further development
+of this combination enabled simultaneous acqusition of Ca\textsuperscript{2+}
+imaging and topography data \cite{Shevchuk2001}.
+% Afterwards, many different
+% studies using a combination of SICM and confocal FM were published:
 
-In addition, hippocampal neurons, which are very delicate samples with many little protrusions, 
-could be investigated with correlated SICM and confocal microscopy. With such a combination active
-synaptic boutons could be identified \cite{Novak2013} (Fig.~\ref{fig:sicm+cfm}b) and topographical changes
-in dendrites were correlated to FM data of mitochondria-containing dendrite regions \cite{Takahashi2019}.
+Seifert et al. \cite{Seifert2017} investigated the morphological activity of
+platelets by time-lapse SICM and subsequently obtained confocal recordings of
+cytoskeletal proteins of the investigated cells, allowing them to correlate
+the activity of the platelets and the structure of the cytoskeleton. 
 
-In a study investigating the formation of human immunodeficiency virus (HIV) virus-like particles 
-(VLPs) the correlated SICM-fluorescence confocal microscopy (SICM-FCM) was used to investigate 
+SICM has been shown to allow patch-clamp recordings from tiny neuronal
+structures like synaptic boutons \cite{Novak2013}. The combination of SICM and
+confocal FM allowed to first record an overview image and to identify active
+synaptic boutons (Fig.~\ref{fig:sicm+cfm}b), which, in a second step, could be
+patch-clamped.
+
+A second study on neurons investigated, besides others, cargo transport in
+neuronal dendrites \cite{Takahashi2019}. Here, the combination of
+confocal FM and SICM provided a hint that the transport processes observed by
+SICM were mediated by mitochondria.
+
+In a study investigating the formation of human immunodeficiency virus-like particles 
+(VLPs) the correlated SICM-fluorescence confocal microscopy was used to investigate 
 topography changes together with die distribution of fluorescently labeled viral proteins like Gag 
-or Viral Protein R (Vpr) \cite{Bednarska2020}. In contrast of investigating the virus formation 
-with total internal reflection fluorescence (TIRF) microscopy \cite{Jouvenet2008} the upside 
-(Oberseite?) of the cells were investigated. The release of VLPs from the upside can be a lot 
-faster, than the release times that were known from TIRF measurements and difference between 
-different cell types and labeled virus proteins were found \cite{Bednarska2020}. 
+or Viral Protein R \cite{Bednarska2020}. In contrast to investigating the virus formation 
+with TIRF microscopy \cite{Jouvenet2008}, the combination of SICM and confocal
+FM allowed to investigate the apical side of the cells. It was found that the release of VLPs is a lot 
+faster than the release at the basal cell side as known from TIRF
+investigations and furthermore, a potential impact on the release time by the
+application of a fluorescent marker was found \cite{Bednarska2020}. 
+
+
+% Bis hier...
 
 The study of Nashimoto was showing that for the detection of secretory proteins, like the von 
 Willebrand factor, it is not always necessary to label the protein. Even with SICM alone the 
