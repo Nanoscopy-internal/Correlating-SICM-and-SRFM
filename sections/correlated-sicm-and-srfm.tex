@@ -5,51 +5,24 @@
 %%% TeX-master: "../manuscript"
 %%% End:
 
-For resolving tiny structures like single cytoskeleton fibers, nanoparticle, with sizes smaller
-than the diffraction-limit, or protein complexes, it would be helpful to use microscopy
-techniques, which can resolve structures beyond the diffraction limit of light (see 
-equation~\ref{eq:diffraction-limit}; \cite{Abbe1873}).
+In contrast to the combination of AFM and SRFM, the development of correlated
+SICM and SRFM is still in its very early stages. The first combination of SRFM
+and SICM has been the use of STORM to determine the number of fluorescent
+molecules deposited via an SICM tip \cite{Hennig2015}. However, recently a
+first proof-of-principle study combining STED and SICM has been published
+\cite{Hagemann2018}.
 
-% Hier kommt jetzt Fig. 3 aus der ACSNano-Publikation. @Patrick: Dafür bräuchten wir dann auch die 
-% Rechte + davon hast du glaube ich auch die Original-PDF-Version!? 
+In the latter, the topography of a group of fixed HeLa has been investigated by SICM
+(Fig.~\ref{fig:SICM_STED1}a) and, subsequently, the cytoskeletal protein actin by 
+confocal and STED microscopy (Fig.~\ref{fig:SICM_STED1}b). The area of the
+sample imaged by both methods is marked in Fig.~\ref{fig:SICM_STED1}c (SICM: yellow 
+rectangle, STED: gray rectangle). 
 
-\begin{figure}
-  \centering
-%   \includegraphics[clip,scale=1]{.PDF} % @Patrick hier bitte auch den entsprechenden Filename 
-% eintragen
-    \caption{
-    \textbf{Simulating diffraction-limited and subdiffraction recordings of a protein involved in 
-    membrane protrusion formation.} 
-    (\textbf{A}) Topographical image of a membrane protrusion on the surface of a HeLa cell. The 
-    black traces indicate the putative location of a hypothetical protein, that could be involved 
-    in the formation of the membrane protrusion. (\textbf{B}) Simulated diffraction-limited 
-    recording of the hypothetical protein (resolution 250~nm). (\textbf{C}) Simulated 
-    subdiffraction recording of the hypothetical protein (resolution 75~nm). The scale bar in A 
-    applies to all images \newline Reprinted with permission from \emph{Philipp Hagemann*, Astrid 
-    Gesper*, Patrick Happel}, Correlative stimulated emission depletion and scanning ion 
-    conductance microscopy, \emph{ACS Nano} 2018, 12, 5807-5815, DOI: 10.1021/acsnano.8b01731. 
-    Copyright 2020 American Chemical Society}
-  \label{fig:structure_element_FM_vs_SRFM}
-\end{figure}    
 
-\subsection{Combining SICM with STED microscopy}
-
-One of that techniques, that can resolve structures beyond the diffraction limit, is STED 
-microscopy (see section~\ref{sec:deterministic-approaches}). In a proof-of-principle study the 
-topography of a group of fixed HeLa cells together with the distribution of actin filaments was
-investigated \cite{Hagemann2018}. Although both methods were able to investigate living cells, the 
-cells were fixed in that study, because the investigation was done consecutively onto two 
-microscopes. The topography was measured with SICM and the distribution of actin with STED 
-microscopy (see figure~\ref{fig:SICM_STED1}).
-
-% Hier soll jetzt Figure 4 unserer ACSNano-Publikation folgen. Patrick, du hast doch die 
-% Ursprungs-/Original-PDF-Version davon, oder? Kannst du die dann bitte hier einfügen und 
-% natürlich gucken, dass wir die Rechte dafür bekommen (das wolltest du ja machen, damit wir das 
-% alles in einem Dokument haben).
 
 \begin{figure}	
   \centering
-%    \includegraphics[clip,scale=1]{.PDF} % @Patrick hier bitte den Filename eintragen
+    \includegraphics[width=\textwidth]{gr/correlating/Hagemann2018-F4}
       \caption{
       \textbf{Correlative SICM and STED recording of a group of HeLa cells.} 
       (\textbf{Aa}) SICM recording of the HeLa cells, (\textbf{Ab}) slope representation of the
@@ -67,53 +40,17 @@ microscopy (see figure~\ref{fig:SICM_STED1}).
   \label{fig:SICM_STED1}
 \end{figure}
 
-The topography of a group of more than four fixed HeLa cells can be seen in 
-figure~\ref{fig:SICM_STED1}Aa the corresponding slope representation in Ab, the confocal image in 
-Ac and the STED image in Ad. The confocal and STED image represents the same region as marked with 
-a black dotted line in Aa and Ab. C is showing the arrangement of the SICM image (yellow 
-rectangle) against the confocal/STED image (gray rectangle). Many different cell topographies were
-visible in Aa. 
+Most interestingly, a protrusion (white arrowhead in
+Fig.~\ref{fig:SICM_STED1}a, b) extending from one cell was captured by both
+methods (magnified in Fig.~\ref{fig:SICM_STED1}d). The confocal recording
+showed a blurred spot within the protrusion (Fig.~\ref{fig:SICM_STED1}db),
+while the STED recording revealed that actin was arranged as a ring-shaped
+structure around two central spots. The authors speculate that this structure
+might be involved in the attachement or detachement of the cell from the cell
+culture dish. However, since the recordings were performed on fixed cells, no
+time-lapse data that could support this speculation exist.
 
-A round cell with a maximum height of approximately 16.4~{\textmu}m height can be seen in the 
-right upper region of the image (marked with a purple arrow in Aa/Ab/Ac/Ad). The cell next to this 
-was flat and exceeding the scanned region (yellow arrow). A second flat but smaller cell was 
-marked with a white arrow, which was ending with a white dot. Marked with an orange arrow (Aa, Ab) 
-respectively with a cyan arrow (Ba, Bb) was a small, kind of roundish cells. This cell posesses 
-a protrusion (white arrowhead), those magnification could be seen in Dd/Df respectively in De/Dg. 
-The protrusion was approximately 4~{\textmu}m long and 5~{\textmu}m high (Dc, 
-\cite{Hagemann2018}).
-
-Beside the different topographies of these two cells, they also display different types of actin 
-fibers. In the inside of the first mentioned round cell nearly no actin signal could be detected 
-(some dot-like structures were marked with purple arrowheads), whereas at the borders of the cell 
-some hair-like structures were visible (white arrow). The long, flat cell showed some long actin 
-fibers (yellow arrowheads). The cell marked with the white arrow, which was ending with a white 
-dot, could be just seen half in the confocal/STED images and dot-like actin structures 
-predominate. The cell with the protrusion was showing fan-like actin structures (cyan arrow, which
-was ending with a cyan dot and white arrow, which was ending with a white dot) where the cell was
-connected to surrounding cells and actin agglomerations (cyan arrow). The agglomerations turned 
-out to be \emph{rings} by watching the STED image (cyan circle). Such a structure could be also 
-found in the protrusion (white arrowhead, Df and Dg). In the center of the \emph{actin ring} two 
-dots could be identified (black arrowheads, Da).
-
-Structures that would have been missed and/or could have been misinterpreted, if just one single
-technique alone would have been used:
-
-\noindent\textsf{
-\begin{tabular}[c]{p{6cm}|p{3cm}|p{3.75cm}}
-\label{tab:missing_structures}
-What? & visible in fig.~\ref{fig:SICM_STED1} by SICM & visible in fig.~\ref{fig:SICM_STED1} by STED microscopy \\ \hline
-The connections between the small round cell with the protrusion and the other cells & \textbf{PARTLY} & YES \\ \hline
-The full extent of the protrusion & YES & \textbf{NO} \\ \hline
-The connection between the roundish and the flat cell & \textbf{NO} & YES \\
-\end{tabular}}
-
-This points out again one of the biggest advantage of correlative microscopy: making things 
-visible, that were invisible to one of the microscopy techniques alone. This could be due to 
-fluorescence signals that were out of focus -- this could be the case by the actin signal that
-suddenly ends in the protrusion -- (STED microscopy) or due to overhanging membranes -- this 
-could be the case by the connections between the cells (especially between the highest and the
-flat cell) -- (SICM) (Quelle).
+% Bis hier
 
 As mentioned in section~\ref{sec:correlating-sicm-and-fm}, SICM was also successfully combined 
 with dSTORM (see section~\ref{sec:smlm}) \cite{Hennig2015a}. The difference to the 
