@@ -146,17 +146,13 @@ release time by the application of a fluorescent marker was found
 
 % ich würde hier etwas zu potentiellen z-stacks + SICM sagen wollen, das hat
 % ja meines Wissens nach noch niemand gemacht...
-Yet,
-a combination of SICM and $z$-stacking confocal FM yields more correlating
-data than combinations of SICM and wide-field techniques as $z$-stacking
-microscopy records data points in multiple $z$ planes. After imaging, these can
-be aligned with the SICM data and non-correlating data can be separated from
-correlating data. Still, there is a potential mismatch in resolution and the
-data has to be processed after imaging to yield correlation. Yet, this
-implementation is suitable for all, not only flat, fixed samples.
+The applications reviewed above used only a single confocal layer. Yet,
+a combination of SICM and $z$-stacking confocal FM could be used to yield more
+correlating data. After imaging the entire volume that is scanned by SICM, the
+data could be aligned and non-correlating data could be separated from
+correlating data. If stage scanning would be omitted, the two measurements
+could be performed simultaneously, but not synchronously.  
 
-
-% Bis hier...
 
 %% Wenn ich das Paper richtig verstehe, wurde hier aber kein konfokales FM
 %% genutzt, oder? 
@@ -230,11 +226,12 @@ a limiting factor. Additionally, usage of three piezo-elements on the same
 platform led to cross-talk and consequentially artefacts in the SICM data
 \cite{Shevchuk2013}. 
 
-% Bis hier überarbeitet.
 
-Both setups keep the probe-objective distance constant and enable the acquisition of a fluorescence
-image and a topography of the sample surface in the same scan. Photobleaching is equalized for every
-point of the sample allowing quantitative analysis of the FM data.
+
+Both setups keep the probe-objective distance constant and enable the
+acquisition of a fluorescence image and a topography of the sample surface in
+the same scan. Photobleaching is equalized for every point of the sample
+allowing quantitative analysis of the FM data.
 
 \begin{figure}
   \includegraphics[width=\textwidth]{gr/correlating/sicm+scm}
@@ -242,24 +239,27 @@ point of the sample allowing quantitative analysis of the FM data.
     \textbf{Combining SICM and SCM.}
     \textbf{a:} Schematic illustration of the correlating data acquired by SSCM.
     \textbf{b:} Simultaneously acquired topographic and fluorescence data of fluorescent Cy3-labeled 
-    VLPs adsorbed to the surface of COS 7 cells. Reprinted with permission from ref \cite{Gorelik2002}.
+    VLPs adsorbed to the surface of Cos-7 cells. Reprinted with permission from ref \cite{Gorelik2002}.
     \textbf{c:} SSCM recordings of fixed clathrin-GFP transfected Cos-7 cells. 
     	\textit{Left:} Cell surface topography. 
-    	\textit{Middle:} Fluorescence recording of the cell shown left. 
+    	\textit{Center:} Fluorescence recording of the cell shown left. 
     	\textit{Right:} 3D overlay of topographical and fluorescent recordings. 
     Reprinted with permission from ref \cite{Shevchuk2008}.
-    \textbf{d:} Live COS 7 cells sequentially scanned by SSCM. Overlays of simmultaneously obtained 
-    topographic and fluorescence scans. Fluorescence imaging was started 2 h 17 min after the first 
-    SICM scan as indicated by the red star. Fluorescent VLPs were added at 2 h 40 min. 
+    \textbf{d:} Live Cos-7 cells sequentially scanned by SSCM. Overlays of simultaneously obtained 
+    topographic and fluorescence scans. Fluorescence imaging was started 2\,h 17\,min after the first 
+    SICM scan as indicated by the red star. Fluorescent VLPs were added at 2\,h 40\,min. 
     Reprinted with permission from ref \cite{Gorelik2002}.
   }
   \label{fig:sicm+scm}
 \end{figure}
 
-As the SICM and SCM data sets are recorded simultaneously, all data points immediately have a
-corresponding data point in the other set. This immediate correlation, schematically illustrated in
-figure \ref{fig:sicm+scm}a, allows not only for correlating studies in fixed samples (figure 
-\ref{fig:sicm+scm}c), but also studies of dynamics in live samples (figure \ref{fig:sicm+scm}d).
+As the SICM and SCM data sets are recorded simultaneously, all data points inherently have a
+correlating data point in the other set. This immediate correlation, schematically illustrated in
+Fig.~\ref{fig:sicm+scm}a, allows not only for correlating studies in fixed
+samples (Fig.~\ref{fig:sicm+scm}c), but also studies of dynamics in live
+samples (Fig.~\ref{fig:sicm+scm}d).
+
+% Bis hier
 
 To highlight the versatility of SSCM, here are some examples: SSCM has been used for investigating the
 dynamics of the interaction of Cy3-labeled polyoma virus-like particles (VLPs) with Cos-7 cells 
