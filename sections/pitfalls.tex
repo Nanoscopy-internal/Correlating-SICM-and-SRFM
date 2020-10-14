@@ -1,135 +1,81 @@
-\section{Potential Pitfalls}
+\section{Outlook}
 \label{sec:pitfalls}
 
-%Combining SICM and FM or SRFM techniques leads to a variable quantity of 
-%correlating data depending on the overlap of data acquired by each technique.
-%Figure \ref{fig:CombinedMicroscopy} schematically illustrates implementations 
-%of combined microscopes and the respective resulting correlating data. 
-%
-%\begin{figure}
-%  \sidecaption
-%  \includegraphics{gr/pitfalls/CombinedMicroscopy}%
-%  \caption{\textbf{Potential implementations of combined SICM and FM.} 
-%  			\textit{Left:} Schematic depiction of potential combined SICM 
-%  			and TIRF or standard wide-field microscopy (\textit{top}),
-%  			SICM and z-stacking (\textit{middle}) and SICM and surface
-%  			scanning (\textit{bottom}). 
-%  			\textit{Right:} Resulting correlating data of these combinations.}
-%  \label{fig:CombinedMicroscopy}
-%\end{figure}
-%
-%A combination of SICM and wide-field microscopy techniques such as TIRF yields
-%two data sets, just as any other combination would. However, before these data
-%sets can be combined and examined for correlating data, it has to be ensured that 
-%a data point from one set is assigned a data point from the other set. As SICM 
-%can have significantly higher resolutions than wide-field microscopy, it is 
-%likely that one data point from the wide-field microscopy data set is assigned 
-%multiple data points from the SICM data set. To avoid this, the SICM pipette 
-%could be adjusted to yield a lower resolution comparable to the wide-field 
-%microscopy resolution. In case of a resolution mismatch the data sets have to be
-%aligned after imaging, as wide-field microscopy is not a scanning technique and
-%records all data at once instead of one another making it impossible to align the
-%microscopes and thus the data recording prior to imaging. Due to the resolution
-%mismatch this can prove difficult.
-%
-%Once the data is aligned, it can be checked for correlations. As SICM traces the 
-%surface of the sample, it changes its position constantly in all 3 dimensions unless
-%the sample has a very flat surface and a change in z direction is not necessary.
-%In contrast, wide-field microscopy only records two dimensional data (in x and y
-%directions). This means, that data points from the two different sets only truly 
-%correlate, if the focus of the wide-field microscope is set to a focal plane (z)
-%in the same or nearly the same z position as the SICM. To achieve this, the SICM
-%should either not change its z position much, which is only reasonable for
-%relatively flat samples, or SICM data from different z planes has to be discarded.
-%Flat cell processes or extensions are an example for a structure, which could be 
-%investigated by a such a combination.
-%
-%SICM and z-stacking FM techniques, when combined, yield more correlating data than
-%SICM and wide-field techniques as z-stacking microscopy as this FM technique
-%records data points in multiple z planes. After imaging these can be aligned with 
-%the SICM data set and non-correlating data can be separated from correlating data.
-%However, there is still a potential mismatch in resolution and the data has the 
-%processed after imaging to yield correlation. Yet, this implementation is suitable
-%for all, not only flat, samples.
-%
-%Implementations of SICM and surface scanning microscopy automatically solve one
-%of the problems occuring when combining SICM with other FM techniques: Both 
-%microscopes are scanning techniques able to change their z position from one data
-%point to the next enabling an alignment before data recording. Therefore, all 
-%recorded data, if aligned correctly, can be assumed to be correlating.
+In the previous sections, we have reviewed the combination of SICM and FM and
+have shown that this combination allows to gather new insights into the
+physiology of living cells. However, despite the mismatch in resolution, most
+of these studies combine SICM and diffraction limited FM. Even other scanning
+probe techniques such as atomic force microscopy, which has a much larger user
+base than SICM, have been combined with SRFM only in a few studies
+\cite{Harke2012,Chacko2013,Chacko2013b,Odermatt2015,Curry2017,Hirvonen2018}.
 
-Instead of having to worsen SICM resolution to match FM resolution, it might be 
-reasonable to combine SICM and SRFM in one setup. Though, this implementation
-comes with its own potential pitfalls, especially as due to the super resolution
-of both techniques small deviations or disturbances are sufficient to ruin the 
-alignment of the setup. Some of these potential pitfalls are discussed in the 
-following:
+We can only speculate about the reasons for this. In its most simple
+implementation, SICM and SRFM data could be recorded on two different
+instruments subsequently \cite{Hagemann2018}. The major problem with this
+approach is finding the same region of the sample in both instruments. Here,
+strategies from correlating FM and electron microscopy (recently reviewed for
+example in \cite{Begemann2016}) might be adapted. A second drawback when using
+TIRF-based methods such as PALM or STORM is the limited penetration depth of
+the excitation beam, which only allows recording fluorescence data close to
+the interface between sample and cell culture dish. However, approaches
+allowing 3D imaging by localisation microscopy exist
+\cite{Huang2008a,Huang2008} and might allow to circumvent this limit.  
 
-To avoid some problems from the beginning, both the SRFM and SICM setups
-should provide spatial resolutions in the same range. Also, if possible, one
-software should be used to control both setups to prevent delays in the
-imaging process due to transmitting information from one software to the other.
+% Instead of having to worsen SICM resolution to match FM resolution, it might be 
+% reasonable to combine SICM and SRFM in one setup. Though, this implementation
+% comes with its own potential pitfalls, especially as due to the super resolution
+% of both techniques small deviations or disturbances are sufficient to ruin the 
+% alignment of the setup. Some of these potential pitfalls are discussed in the 
+% following:
 
-Some potential pitfalls can arise when aligning the SRFM and SICM
-setups. There are two alignment options: The first one is aligning the pipette
-tip and the laser beam only in the xy plane, e.g. for imaging fluorescent
-proteins in the cytoskeleton and the cell membrane simultaneously. This is 
-comparable, in terms of data recording, to the above mentioned combinations of
-SICM and wide-field or z-stacking microscopy. 
-The second one, surface scanning, is additionally aligning the tip and beam
-in the z plane, e.g. to image cell membrane and fluorescent particles or proteins 
-within the membrane simultaneously, as has been done in 
-SSCM \cite{Gorelik2002a}\cite{Shevchuk2008}.
+% To avoid some problems from the beginning, both the SRFM and SICM setups
+% should provide spatial resolutions in the same range. Also, if possible, one
+% software should be used to control both setups to prevent delays in the
+% imaging process due to transmitting information from one software to the other.
 
-Especially the second option tracing the cell surface would require constant
-focal plane adjustment of the optical setup. This might eventually lead to a
-mismatch in the excitation and depletion beam superimposition.
+In the case of combining SICM with a scanning technique such as STED, there
+are two alignment options: The first one is aligning the pipette tip and the
+laser beam only in the $x,y$ plane. This is comparable, in terms of data
+recording, to the above mentioned combinations of SICM and wide-field or
+confocal microscopy.  The second one, surface scanning, requires the
+additional alignment of the tip and, in case of STED, the two beams in the
+$z$-plane.
 
-It has to be put into consideration whether fine adjustment screws are enough
-to align the pipette and the beam. It is apparently sufficient for aligning
-SICM and confocal microscopes \cite{Gorelik2002a}\cite{Shevchuk2008}. 
-In case it isn't accurate enough piezo elements might have to be used. 
-However, the usage of 3 piezo elements mounted to the same platform, may it be
-the pipette holder or sample stage, is reported to have caused cross-talk during
-sample positioning leading to image artifacts in the range of 100 nm 
-\cite{Shevchuk2013}. Hence, it would be better to uncouple xy piezos from 
-the z piezo. Furthermore, z piezos come with an increased risk of piezo drift. 
-Therefore, especially the sample stage should ideally avoid z piezo usage.
+Especially the second option would require repeated
+focal plane adjustment of the optical setup. In turn, this requires meticulous
+alignment of the excitation and depletion beam to retain the super-imposition
+of the two beams during the adjustment of the focal plane. To minimize the
+pixels that require an adjustment of the focal plane, the adjustment has been
+only applied if a $z$-range of more than one micrometer was exceeded
+\cite{Novak2014}. If STED recordings with increased vertical resolution are
+intended, the acceptable range for not adjusting the focal plane decreases,
+which in turn might lead to longer and less stable recordings. 
 
-Both alignment options may lead to the pipette tip reflecting the beam and
-thereby distorting the resulting recordings. In this case the pipette tip
-would have to be retracted until it can't reflect the beam light anymore,
-before a recording with the optical setup can be executed. Consequently, this
-means the SRFM and the SICM recording can't be executed simultaneously but
-successively.
+Due to the increased horizontal resolution, even the $x,y$-alignment of SICM
+pipette and the laser beams becomes more challenging since the tolerable
+offset between the two decreases. While it has been reported that fine
+adjustment screws are sufficient to align the pipette and the beam in the
+combination of SICM and confocal microscopes \cite{Gorelik2002a,
+  Shevchuk2008,Novak2014}, additional piezo elements might be required for the
+alignment of STED and SICM.
 
-While this might seem like a drawback extending the overall recording time, it
-also solves another problem that comes with combining SRFM and SICM:
-photo-bleaching and photo-damage of the sample. SRFM techniques like STED
-microscopy come with a general risk of photo-bleaching and -damage as high
-intensity lasers are used. Combining SRFM with SICM increases this risk,
-as SICM is a much slower imaging technique. The pipette will not only have to
-be moved in the xy plane but also in the z plane to avoid sample
-contact. Hence, the imaging speed will mostly be dependent on the SICM
-capillary speed especially in z direction. If the sample is illuminated by the
-laser continuously during capillary approach and retraction, photo-bleaching
-and -damage is likely to occur. Therefore, illuminating the sample right after
-SICM surface detection, recording and pipette retraction for a short period of
-time would not only result in reflection avoidance but also in less
-photo-bleaching and -damage. In case, light reflection by the scanning
-capillary doesn't occur, the sample could be illuminated right after surface
-detection leading to a faster imaging speed of the combined setup.
+If the depletion laser and the pipette tip are aligned in all three
+dimensions, the pipette tip might reflect the depletion beam. Since the
+intensity of the beam is large to achieve a high resolution, the reflected
+light might not be completely filtered by the filters in the emission beam
+path. In this case, the pipette would have to be retracted first before the
+recording of the fluorescence data could be performed.
 
-The switching of the laser beams could either be done via mechanical
-shutters. However, as mechanical shutters have a limited switching frequency,
-it might be preferential to switch beams by switching akkusto-optical modulators.
+This, in turn, requires a precise control of the data acquisition by the two
+imaging methods, which can be only obtained by a designated controlling soft-
+and hardware.
 
-Another problem stemming from capillary movement is the resonance of the
-pipette resulting from it. Some groups have ensured resonance reduction by
-using a v-groove mounting plate for the capillary instead of the conventional
-patch clamp pipette holders \cite{Shevchuk2013}.
+In summary, the development of combined SICM and SRFM instruments has just
+begun, and several technical hurdles have to be overcome during the
+further development. However, there are no fundamental contradictions that
+would hinder the combination of SICM and SRFM. Therefore, we expect this field
+of research to grow in the near future.     
 
- 	
 
 %%% Local Variables:
 %%% mode: latex
