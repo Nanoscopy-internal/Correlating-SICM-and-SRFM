@@ -6,12 +6,18 @@
   \includegraphics[width=\textwidth]{gr/correlating/sicm+fm}
   \caption{%
     \textbf{Combining SICM and wide-field fluorescence microscopy.}
-    \textbf{a:}
-    \textbf{b:} FM image of presynaptic nerve terminals stained with
-    FM1-43. \textbf{c:} Overlay of the FM-image and two SICM recordings of the
-    same region. \textbf{d:} 3D-representation of the lower right SICM
-    recording from c.
-    \textbf{b--d:} Reprinted with permission from ref \cite{Scheenen2015}.
+    \textbf{a:} Sketch of the data obtained by combining SICM and wide-field
+    FM. 
+    \textbf{b:} (left) FM image of a cilium in a RPE-1 cell, (right) SICM recording of
+    the area marked by the dashed rectangle. The cilium is not visible since
+    it is located benaeth the cell membrane \textbf{c:} (left) FM image of a
+    cilium in a MDCK cell, (right) SICM recording of the
+    region marked by the dashed rectangle. The cilium is clearly visible since
+    it protrudes into the extracellular space.
+    \textbf{b, c:} Reprinted with permission from Yuanshu Zhou, Masaki Saito,
+    Takafumi Miyamoto, et al.: \emph{Nanoscale Imaging of Primary Cilia with
+      Scanning Ion Conductance Microscopy.} Anal. Chem. 2018, 90, 4,
+    2891–2895. Copyright 2018 American Chemical Society.
   }
   \label{fig:sicm+fm}
 \end{figure}
@@ -50,39 +56,23 @@ instruments can be controlled independently by their own software.
 
 So far, the combination of SICM and wide-field FM has been used to find a
 region of interest such as an area containing active synapses in a culture of
-a neuronal network \cite{Scheenen2015} (Fig.~\ref{fig:sicm+fm}b--d) or to
+a neuronal network \cite{Scheenen2015} or to
 identify the neuron which had been investigated by SICM-guided patch-clamp of
 synaptic boutons \cite{Novak2013}.
 
 Furthermore, it has been used to first identify primary cilia in a cell
 culture and subsequently use SICM to reveal whether the selected cilium was
-extending into the extracellular space or was embedded in the cell, an
+extending into the extracellular space or was embedded in the cell
+(Fig.~\ref{fig:sicm+fm}b, c), an
 information which could not be retrieved by using FM alone \cite{Zhou2018}.
 
-
-\begin{figure}
-  \includegraphics[width=\textwidth]{gr/correlating/Nikolaev2010-F2}
-  \caption{
-    \textbf{Distribution of $\beta_1$- and $\beta_2$-adrenergic receptors (AR) on the surface of 
-    cardiomyocytes obtained from healthy rats.}
-    \textbf{a:} SICM recording of a cardio-myocyte which was subsequently
-    tested for the occurrence of the $\beta_1$-AR at the crest (\textbf{b})
-    and at the T-tubule (\textbf{c}). 
-    \textbf{d:} SICM recording of a cardio-myocyte which was subsequently
-    tested for the occurrence of the $\beta_2$-AR at the crest (\textbf{d})
-    and at the T-tubule (\textbf{e}).
-    Reprinted with permission from ref. \cite{Nikolaev2010}.
-  }
-  \label{fig:nikolaev2010}
-\end{figure}
-
 Cardio-myocytes exhibit a unique topography with transverse (T-)tubules and
-crests (Fig.~\ref{fig:nikolaev2010}a, d). By first recording the topography
+crests. By first recording the topography
 and subsequently moving the SICM pipette to either a T-tubule or a crest,
 followed by the local application of agonists of either the $\beta_1$- or
 $\beta_2$-adrenergic receptor (AR) and recording the intensity ratio of cyan
 and yellow fluorescent protein, coupled to a Förster resonance energy transfer
-(FRET) based reporter of cyclic AMP (Fig.~\ref{fig:nikolaev2010}b, c, e, f), it was
+(FRET) based reporter of cyclic AMP, it was
 shown that the distribution of the $\beta_2$-AR was altered in failing
 cardio-myocytes \cite{Nikolaev2010}. Furthermore, this approach was used to
 investigate the effect of partial mechanical unloading, showing that it
@@ -106,7 +96,9 @@ a redistribution of the $\beta_3$-AR occurs in failing cardio-myocytes, too
     	(center:) Fluorescence of the same neuronal network as depicted on the left.
     	(right:) Overlay of topography and fluorescence of two regions of interest (ROI 1, ROI 2) from
     	the left and middle image.
-    Reprinted with permission from ref \cite{Novak2013}.
+    Reprinted with permission from P. Novak, J. Gorelik, U. Vivekananda, et
+    al.: \emph{Nanoscale-Targeted Patch-Clamp Recordings of Functional
+      Presynaptic Ion Channels.} Neuron 2013, 79, 1067--1077.
   }
   \label{fig:sicm+cfm}
 \end{figure}
@@ -124,8 +116,6 @@ SICM and confocal FM have been combined for the first time by Korchev et al.
 volume measurements obtained by SICM. Just a year later, further development
 of this combination enabled simultaneous acquisition of Ca\textsuperscript{2+}
 imaging and topography data \cite{Shevchuk2001}.
-% Afterwards, many different
-% studies using a combination of SICM and confocal FM were published:
 
 Seifert et al. \cite{Seifert2017} investigated the morphological activity of
 platelets by time-lapse SICM and subsequently obtained confocal recordings of
@@ -160,8 +150,6 @@ known from TIRF investigations and furthermore, a potential impact on the
 release time by the application of a fluorescent marker was found
 \cite{Bednarska2020}.
 
-% ich würde hier etwas zu potentiellen z-stacks + SICM sagen wollen, das hat
-% ja meines Wissens nach noch niemand gemacht...
 The applications reviewed above used only a single confocal layer. Yet,
 a combination of SICM and $z$-stacking confocal FM could be used to yield more
 correlating data. After imaging the entire volume that is scanned by SICM, the
@@ -180,14 +168,14 @@ SICM for that pixel. Up to now, two slightly different setups have been proposed
 (Fig.~\ref{fig:sscm_setup}) \cite{Gorelik2002a,Shevchuk2013}.
 
 \begin{figure}
-  \includegraphics[width=\textwidth]{gr/correlating/sscm_setup}
+  \centering
+  \includegraphics{gr/correlating/sscm_setup}
 
   \caption{%
     \textbf{Two setups for a SSC microscope.}
     \textbf{a:} Diagram of the combined setup with an $x,y,z$ sample scanner.
     \textbf{b:} Diagram of the combined setup with a $x,y$ sample scanner and
-    a $z$-probe and objective scanner. 
-    Reprinted with permission from ref \cite{Shevchuk2013}.
+    additional $z$-scanners for probe and objective. 
   }
   \label{fig:sscm_setup}
 \end{figure}
@@ -204,10 +192,10 @@ SICM probe at a fixed position and scanning is performed by the sample
 stage which positions the sample in all three dimensions.
 
 In contrast, the second setup (Fig.~\ref{fig:sscm_setup}b) uses the sample
-stage to position the sample in $x$- and $y$-direction only while objective
-and probe are positioned by additional piezo elements in $z$-direction. Thus,
-when the surface is detected by the SICM pipette,  the position of
-the confocal spot has to be adjusted by the objective positioning piezo subsequently.
+stage to position the sample only in $x$- and $y$-direction while objective
+and probe are positioned by additional piezo actors in $z$-direction. Thus,
+when the surface is detected by the SICM pipette, the position of the confocal
+spot has to be adjusted by the objective positioning piezo actor subsequently.
 
 Both setups do not allow to use the controlling software of the confocal
 microscope since the fluorescence data has to be recorded after the SICM
@@ -215,108 +203,94 @@ pipette has detected the surface. Thus, the SICM controlling soft- and
 hardware had to be extended to at least allow reading from the detectors of
 the confocal microscope. 
 
-Switching from three-axis stage scanning to $z$-movement of the pipette
-allowed for faster scan rates as the resonant frequency of the 3D
-piezo-actor acted as a limiting factor. Additionally, usage of three
-piezo-elements on the same platform led to cross-talk and consequentially
+Switching from three-axis stage scanning to $z$-movement of the pipette and
+objective allowed for faster scan rates since the resonant frequency of the 3D
+scanning stage limited the recording velocity. Additionally, usage of three
+piezo-actors on the same platform led to cross-talk and consequentially
 artefacts in the SICM data \cite{Shevchuk2013}.
 
 
-
 Both setups keep the probe-objective distance constant and enable the
-acquisition of a fluorescence image and a topography of the sample surface in
-the same scan. Photobleaching is equalized for every point of the sample
-allowing quantitative analysis of the FM data.
+acquisition of a fluorescence image and the topography of the sample surface in
+the same scan.
 
 \begin{figure}
   \includegraphics[width=\textwidth]{gr/correlating/sicm+scm}
   \caption{%
     \textbf{Combining SICM and SCM.}
     \textbf{a:} Schematic illustration of the correlating data acquired by SSCM.
-    \textbf{b:} Simultaneously acquired topographic and fluorescence data of fluorescent Cy3-labeled 
-    VLPs adsorbed to the surface of Cos-7 cells. Reprinted with permission from ref \cite{Gorelik2002a}.
-    \textbf{c:} SSCM recordings of fixed clathrin-GFP transfected Cos-7 cells. 
-    	\textit{Left:} Cell surface topography. 
-    	\textit{Center:} Fluorescence recording of the cell shown left. 
-    	\textit{Right:} 3D overlay of topographical and fluorescent recordings. 
-    Reprinted with permission from ref \cite{Shevchuk2008}.
-    \textbf{d:} Live Cos-7 cells sequentially scanned by SSCM. Overlays of simultaneously obtained 
-    topographic and fluorescence scans. Fluorescence imaging was started 2\,h 17\,min after the first 
-    SICM scan as indicated by the red star. Fluorescent VLPs were added at 2\,h 40\,min. 
-    Reprinted with permission from ref \cite{Gorelik2002}.
+    \textbf{b:} SSCM recordings of fixed clathrin-GFP transfected Cos-7 cells. 
+    	(left:) Cell surface topography. 
+    	(center:) Fluorescence recording of clathrin in the cell shown left. 
+    	(right:) 3D overlay of topographical and fluorescent recordings. 
+    Reprinted from Shevchuk, A.I., Hobson, P., Lab, M.J., et al.: \emph{Endocytic
+    pathways: combined scanning ion conductance and surface confocal
+    microscopy study.} Pflugers Arch - Eur J Physiol 2008, 456, 227–235 with permission.
   }
   \label{fig:sicm+scm}
 \end{figure}
 
-As the SICM and SCM data sets are recorded simultaneously, all data points inherently have a
-correlating data point in the other set. This immediate correlation, schematically illustrated in
-Fig.~\ref{fig:sicm+scm}a, allows not only for correlating studies in fixed
-samples (Fig.~\ref{fig:sicm+scm}c), but also studies of dynamics in live
-samples (Fig.~\ref{fig:sicm+scm}d).\todo{Improve paragraph}
+As the SICM and SCM data sets are recorded simultaneously, all data points
+inherently have a correlating data point in the other set, as illustrated in
+Fig.~\ref{fig:sicm+scm}a. This allows for determining the distribution of
+proteins in the proximity of the cell membrane (Fig.~\ref{fig:sicm+scm}b).
 
 
 
-SSCM has been used for investigating the dynamics of the interaction of
+First, SSCM  has been used for investigating the dynamics of the interaction of
 Cy3-labeled polyoma virus-like particles (VLPs) with Cos-7 cells
-(Fig.~\ref{fig:sicm+scm}b,d) \cite{Gorelik2002a}, for the investigation of the
-uptake of fluorescent nanoparticles in immortalized human alveolar epithelial
-type 1 (AT1) cells and AT2 cells \cite{Kemp2008,Novak2014}, for investigating
-the differentiation of stem cells \cite{Gorelik2008} and the correlation of
-topography and T-tubule distribution \cite{Lyon2012} or topography and
-mitochondria localization and appearance \cite{Miragoli2016} in healthy and 
-heart-failure cardiomyocytes. Furthermore, it has been utilized in 
-studies investigating endocytotic pathways \cite{Shevchuk2008}
-(Fig.~\ref{fig:sicm+scm}c) and in a study revealing an alternative closing
-mechanism for clathrin-coated pits by recording topography simultaneously with
-the fluorescence of tagged actin-binding protein and the tagged clathrin
-light-chain \cite{Shevchuk2012}. A further study on clathrin-mediated
-endocytosis revealed the effect of mutations in the Dynamin~2 gene on the
-maturation and internalisation of clathrin coated pits \cite{Ali2019}.
+\cite{Gorelik2002a}.
 
-% Bis hier
+Furthermore, it has been utilized in studies investigating endocytotic
+pathways \cite{Shevchuk2008a} (Fig.~\ref{fig:sicm+scm}b), besides others
+revealing an alternative closing mechanism for clathrin-coated pits by
+recording topography simultaneously with the fluorescence of tagged
+actin-binding protein and the tagged clathrin light-chain
+\cite{Shevchuk2012}. A further study on clathrin-mediated endocytosis revealed
+the effect of mutations in the Dynamin~2 gene on the maturation and
+internalisation of clathrin coated pits \cite{Ali2019}.
 
-% \subsection{Nanoinjection of fluorescently labeled molecules}
-
-% Nevertheless SICM does not necessary being used for investigating the topography of a cell, 
-% the nanopipette of a SICMic could be also used for the targeted deposition of molecules, like 
-% fluorescently-labeled single stranded-DNA molecules \cite{Ying2002,Hennig2015}. The nanopipette 
-% could be also used for nanoinjection of fluorescently labeled molecules into living cells 
-% \cite{Hennig2015a}. The SICM was therefore combined with wide-field and direct stochastic 
-% optical reconstruction microscopy (dSTORM), and mitochondria, actin and DNA could be successfully 
-% stained. One problem with the nanoinjection was that artifacts, due to the holes that were 
-% introduced into the membranes, could occur \cite{Hennig2015a}.
-
-% The delivery of fluorescently labeled molecules with the nanopipette could be also used for 
-% combining it with single-molecule diffusion investigations \cite{Bruckbauer2007, Bruckbauer2010}. 
-% In both studies the scanning ion conductance microscope was combined with TIRF investigations and 
-% the diffusion of single molecules over different regions at a spermatozoa were investigated. 
+\begin{figure}
+  \centering
+  \includegraphics{gr/correlating/SSCM-np}
+  \caption{%
+    \textbf{Investigation on nanoparticle uptake by SSCM.}  \textbf{a:} Height
+    profile of a section of a AT1-like cell treated with 200\,nm fluorescent
+    nanoparticles.  \textbf{b:} Slope representation of the area shown in a.
+    \textbf{c:} Surface fluoresecence of the same area.  \textbf{d:} Overlay
+    of surface fluorescence and slope representation.  Yellow arrowheads mark
+    nanoparticles that co-localise with membrane protrusions (white
+    arrowheads), blue arrowheads mark nanoparticles being in the process of
+    internalisation, green arrowheads mark fully internalised nanoparticles.
+    Reprinted with permission from P. Novak, A Shevchuk, P. Ruenraroengsak, et
+    al.: \emph{Imaging Single Nanoparticle Interactions with Human Lung Cells
+      Using Fast Ion Conductance Microscopy.} Nano Lett. 2014, 14, 3,
+    1202–1207. Copyright 2014 American Chemical Society.}
+  \label{fig:sscm-np}
+\end{figure}
 
 
-% The SICM-nanopipette could be also used for investigating membrane rafts 
-% \cite{Simons1997,Pike2006} by coordinated manipulation of focal adhesions. The pipette was 
-% functionalized with fibronectin, gangliosides were fluorescently labeled, the pipette deformed the 
-% focal adhesion side and the behavior of the fluorescently labeled gangliosides were detected. This 
-% was seen as a hint, how membrane rafts reacted \cite{Fuentes2012}. 
+SSCM was used to characterise the nanoparticle uptake by primary human alveolar
+epithelial type 2 (AT2) and by immortalized AT2 cells. Only the latter showed
+a strong tendency to internalise nanoparticles. Since, furthermore, the
+immortalized cells exhibited several characteristics of alveolar
+epithelial type 1 (AT1) cells, it was suggested that AT1 cells play a pivotal
+role in the translocation of nanometer-sized particles in the lung
+\cite{Kemp2008}.
 
-% Another example for a SICM-nanopipette based manipulation could be found in the study on the 
-% generation and distribution of plasma-derived extracellular vesicles (PEVs) on MDA-MB-231 and U87 
-% cells. Here the nanopipette were used for both, investigating the topography and for inducing the 
-% generation of the PEVs. Additionally the SICM was build up onto a confocal microscope, which could 
-% be used for the detection of Calcium \cite{Wang2020}.
+Figure~\ref{fig:sscm-np} shows nanoparticles in the proximity of the surface of
+AT1-like cells at three different stages of the internalisation: co-localised
+with membrane protrusions (yellow and white arrowheads, respectively), in the
+process of internalisation (blue arrowheads) and fully internalised (green
+arrowheads). An improvement of the scanning velocity by the addition of a stiff,
+short-range piezo actor onto the pipette positioning piezo actor allowed to
+follow the internalisation process with a temporal resolution of 15 seconds in
+detail \cite{Novak2014}.
 
-% % Piper2006 -> PMID: 17177370
-% The SICM-nanopipette could be also used as a nanosensor for pH- or ionic concentration changes 
-% \cite{Piper2006}. In this study fluorophores were trapped in the nanopipette and react on changes 
-% of the pH value or the concentration of ions with alterations in the detected fluorescence signal.
-
-% Dieser Abschnitt passt nicht so wirklich zu Fluoreszenz-Mikroskopie! Vielleicht noch so was 
-% schreiben, wie „SICM kann nicht nur mit Fluoreszenz mikroskopischen Methoden kombiniert werden, 
-% sondern kann auch mit … kombiniert werden!? Sonst kann der einfach auch weg. Mal gucken.
-
-% By using a special illumination system consisting of a light emitting diode (LED) light ring, SICM 
-% could also being combined with condenser-free phase contrast, darkfield and brightfield images and 
-% even Rheinberg illuminations were possible \cite{Webb2014}.
-
+Furthermore, SSCM was used for investigating the differentiation of stem cells
+\cite{Gorelik2008} and the correlation of topography and T-tubule distribution
+\cite{Lyon2012} or topography and mitochondria localisation and appearance
+\cite{Miragoli2016} in healthy and heart-failure cardiomyocytes.
 
 %%% Local Variables:
 %%% mode: latex
