@@ -102,7 +102,7 @@ is located in front of a single detector (left inset in
 Fig.~\ref{fig:FM-setups}b). Since this setup does not allow imaging the entire
 sample at once, the sample has to be scanned with respect to the excitation
 light beam and the image is collected pixel by
-pixel. Fig.~\ref{fig:FM-setups}c illustrates the major effect of the pinhole:
+pixel. Figure~\ref{fig:FM-setups}c illustrates the major effect of the pinhole:
 Emission from out-of-focus planes (dotted and dashed lines) is blocked by the
 pinhole since it is located in the same focal plane as the sample (thus the
 name \emph{confocal}). 
@@ -154,11 +154,24 @@ dyes).
 \begin{figure}
   \centering
   \includegraphics{gr/intro/localisation-mic}
-  \caption{}
+  \caption{%
+    \textbf{Principle of PALM.}
+    \textbf{a:} Initially, all fluorophores are in the inactivated state (grey
+    dots).
+    \textbf{b:} A small subset of the fluorophores is activated (cyan
+    background, white dots) and subsequently excited (green background, yellow
+    dots) until the fluorophores bleach (black dots). The emission of the
+    fluorophores is recorded. This series is repeated until all fluorophores
+    have emitted.
+    \textbf{c:} The positions of the fluorophores in the recordings are
+    determined and plotted as a Gaussian distribution with a standard
+    deviation equal to the uncertainty of the localisation and the single
+    images are combined to a single image with improved resolution.
+  }
   \label{fig:lm}
 \end{figure}
 
-The principle of these methods is illustrated in Fig.~\ref{fig:lm}. Initially,
+As an example, the principle of PALM is illustrated in Fig.~\ref{fig:lm}. Initially,
 all fluorophores within the sample are inactivated (``off''-state, grey dots
 in Fig.~\ref{fig:lm}a). Next, light suitable to switch the fluorophores (cyan
 background, Fig.~\ref{fig:lm}b) from the inactivated to the activated (``on'')
@@ -262,12 +275,12 @@ depletion beam and is given by
   \label{eq:resolution-STED}
 \end{equation}
 which is a modification of Abbe's original equation
-(eq.~\eqref{eq:diffraction-limit}). Here, $I_\text{sat}$ is the intensity
-required to induce stimulated emission in half of the fluorophores.
-
-The best resolution (approximately 2\,nm) obtained by STED microscopy has
+(Eq.~\ref{eq:diffraction-limit}). Here, $I_\text{sat}$ is the intensity
+required to induce stimulated emission in half of the fluorophores. The best resolution (approximately 2\,nm) obtained by STED microscopy has
 been recorded on samples containing fluorescent color centers in diamond
-crystal \cite{Wildanger2012}. Note that, by applying a depletion beam of a
+crystal \cite{Wildanger2012}.
+
+Note that, by applying a depletion beam of a
 different shape, STED microscopy allows to improve the resolution along the
 optical axis \cite{Harke2008, Wildanger2009}. A large number of reviews articles exist
 which summarize the use of STED (or in general, RESOLFT) microscopy in different
