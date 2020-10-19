@@ -8,7 +8,7 @@ absorption of a photon by a molecule, the fluorophore, followed by the
 spontaneous emission of a second photon. The transitions between the energetic
 states of the fluorophore are depicted in
 Fig.~\ref{fig:jablonski-fluorescence}a. Due to the non-radiative loss of
-energy during the involved vibrational decays (black arrows in
+energy during the involved vibrational decays (black wave-like arrows in
 Fig.~\ref{fig:jablonski-fluorescence}a), the energy $h\nu_\text{em}$ of the
 emitted photon is smaller than the energy of the absorbed photon
 $h\nu_\text{ex}$ (here, $h$ denotes the Planck constant). Since the frequency $\nu$
@@ -27,7 +27,8 @@ photon.
     diagram of fluorescence. A photon of energy $h\nu_\text{ex}$ gets absorbed
     and excites the molecule from its electronic ground state $S_0$ to a
     vibrational excited state of the electronic state $S_1$ (green
-    arrow). After radiation-less relaxation (black arrow) into the vibrational
+    arrow). After radiation-less relaxation (black wave-like arrow) into the
+    vibrational 
     ground state of $S_1$, the molecule returns to one of the vibrational
     states of $S_0$ (red arrow) by emitting a photon of energy
     $h\nu_\text{em}$, after which it relaxes to the lowest vibrational state
@@ -37,24 +38,25 @@ photon.
   \label{fig:jablonski-fluorescence}
 \end{figure}
 
-Typical absorbance/emission spectra of fluorophores used as dyes in FM are
-shown in Fig.~\ref{fig:jablonski-fluorescence}b. In FM, a single wavelength or
-a wavelength range (green rectangle in Fig.~\ref{fig:jablonski-fluorescence}b) 
-suitable to excite the fluorophore used is chosen -- by using a laser
-or LED or by selecting the wavelength range via a band-pass filter from a
-white light source -- and send through the objective lens of the microscope to
-the sample. In most FMs (the so called epifluorescence microscopes), the
-emission is collected via the same objective lens. Since the emission is
-red-shifted with respect to the excitation wavelength, the emitted photons
-(wavelength range depicted by red rectangle in
-Fig.~\ref{fig:jablonski-fluorescence}b) can be separated from the ones used to
-excite the fluorophores by a dichroic mirror.
+A typical absorbance/emission spectrum of an arbitrary fluorophore used as dye
+in FM is shown in Fig.~\ref{fig:jablonski-fluorescence}b. In FM, a single
+wavelength or a wavelength range (green rectangle in
+Fig.~\ref{fig:jablonski-fluorescence}b) suitable to excite the fluorophore
+used is chosen -- by using a laser or LED or by selecting the wavelength range
+via a band-pass filter from a white light source -- and send through the
+objective lens of the microscope to the sample. In most FMs (the so called
+epifluorescence microscopes), the emission is collected via the same objective
+lens. Since the emission is red-shifted with respect to the excitation
+wavelength, the emitted photons can be separated from the ones used to
+excite the fluorophores by a dichroic mirror. The wavelength range of a typical
+detection window is depicted by the red rectangle in
+Fig.~\ref{fig:jablonski-fluorescence}b. 
 
 \begin{figure}
-  \includegraphics{gr/intro/FM-setups}
-  \caption{\textbf{Beam paths and major components of fluorescent
-      microscopes.} \textbf{a:} Excitation (green) and emission (red) beam
-    paths of a wide-field microscope. \textbf{b:} Excitation (green) and
+  \includegraphics{gr/intro/widefield-setup}
+  \caption{\textbf{Beam paths and major components of a wide-field fluorescent
+      microscope.} Excitation (green) and emission (red) beam
+    paths. \textbf{b:} Excitation (green) and
     emission beam paths (red) of a confocal microscope.  \textbf{c:} Emission
     beam path (filters omitted for clarity) of a confocal microscope showing
     how out-of-focus emission (dashed and dotted lines) is suppressed by the
@@ -66,22 +68,22 @@ The two most common implementations of FM used in the life sciences are the
 wide-field and the confocal microscope. Both use a dichroic mirror to separate
 excitation and emission, but their implementations differ in the way how the
 sample is excited and how the emission is recorded. The beam paths and the
-major components of a wide-field and a confocal FM are depicted in
-Fig.~\ref{fig:FM-setups}. In a wide-field FM (Fig.~\ref{fig:FM-setups}a), the
+major optical components of a wide-field FM are depicted in
+Fig.~\ref{fig:FM-setups}. In a wide-field FM, the
 entire sample is illuminated at the same time, and all fluorophores in the sample
 emit at the same time (yellow circles in the right inset in
-Fig.~\ref{fig:FM-setups}a). The emission of the fluorophores (solid red shape
-in Fig.~\ref{fig:FM-setups}a, only five beam paths are shown for clarity) is
+Fig.~\ref{fig:FM-setups}). The emission of the fluorophores (solid red shape
+in Fig.~\ref{fig:FM-setups}, only five beam paths are shown for clarity) is
 collected by the objective lens, passes the dichroic mirror and is further
 cleared by a band-pass filter. The emission then is focused by the tube lens
 onto the camera, which records an image of the emission of all fluorophores at
 the same time.
 
 Each fluorophore in the sample generates a diffraction limited spot on the
-camera, and spots which are not separated in space by at least the diffraction limit
-cannot be distinguished as single spots. Thus, the wavelength which determines
-the resolution in a wide-field microscope is the wavelength $\lambda_\text{em}$
-of the emission.
+camera, and spots which are not separated in space by at least the diffraction
+limit overlap and cannot be distinguished as single spots. Thus, the
+wavelength which determines the resolution in a wide-field microscope is the
+wavelength $\lambda_\text{em}$ of the emission.
 
 The major disadvantage of a wide-field microscope is that the sample is not
 only illuminated in the focal plane of the objective lens, but also
@@ -90,19 +92,31 @@ emission is collected (not shown for clarity). Since they are not located in
 the focal plane of the objective lens, their emission does not result in a
 sharp spot on the camera, but instead appears as a blurred background.    
 
+\begin{figure}
+  \includegraphics{gr/intro/confocal-setup}
+  \caption{\textbf{Beam paths and major components of a confocal fluorescent
+      microscope.} \textbf{a:} Excitation (green) and
+    emission beam paths (red).  \textbf{b:} Emission
+    beam path (filters omitted for clarity) of a confocal microscope showing
+    how out-of-focus emission (dashed and dotted lines) is suppressed by the
+    confocal pinhole.}
+  \label{fig:confocal-setup}
+\end{figure}
+
+
 This led to the invention of the confocal microscope
 \cite{Heimstaedt1911,Minsky1988}. The beam path of a confocal microscope is
-shown in Fig.~\ref{fig:FM-setups}b. Here, the excitation light (green solid
+shown in Fig.~\ref{fig:confocal-setup}a. Here, the excitation light (green solid
 shape) is focused onto the sample by the objective lens and only the
 fluorophores within the resulting diffraction limited spot are excited. Thus, the
 wavelength which determines the resolution of a confocal microscope is the
 excitation wavelength $\lambda_\text{ex}$. In contrast to the wide-field
 microscope, the emission of the fluorophores is focused onto a pinhole which
 is located in front of a single detector (left inset in
-Fig.~\ref{fig:FM-setups}b). Since this setup does not allow imaging the entire
+Fig.~\ref{fig:confocal-setup}a). Since this setup does not allow imaging the entire
 sample at once, the sample has to be scanned with respect to the excitation
 light beam and the image is collected pixel by
-pixel. Figure~\ref{fig:FM-setups}c illustrates the major effect of the pinhole:
+pixel. Figure~\ref{fig:confocal-setup}b illustrates the major effect of the pinhole:
 Emission from out-of-focus planes (dotted and dashed lines) is blocked by the
 pinhole since it is located in the same focal plane as the sample (thus the
 name \emph{confocal}). 
@@ -165,7 +179,7 @@ dyes).
     have emitted.
     \textbf{c:} The positions of the fluorophores in the recordings are
     determined and plotted as a Gaussian distribution with a standard
-    deviation equal to the uncertainty of the localisation and the single
+    deviation equal to the uncertainty of the localisation and the 
     images are combined to a single image with improved resolution.
   }
   \label{fig:lm}
@@ -204,7 +218,7 @@ by localisation is provided by \cite{Mortensen2010}.
 This brief explanation is far from being exhaustive and does not consider the
 differences in the implementations of the various techniques. An in-depth
 overview is provided by several reviews of the techniques
-\cite{Patterson2010,Sengupta2014,Liu2015,Sauer2017}, suitable dyes
+\cite{Patterson2010,Sengupta2014,Liu2015,Sauer2017}, of suitable dyes 
 \cite{Li2018a} as well as by detailed imaging protocols
 \cite{Gould2009,Schermelleh2010,Linde2011}. However, one aspect of the
 implementation which is important for the potential combination with SICM is
@@ -268,7 +282,7 @@ fluorophores that undergo stimulated emission to an invisible ``off''-state.
 
 In summary, this directly yields a recording of the fluorophores with a
 resolution beyond the diffraction limit (Fig.~\ref{fig:STED-principle}d). The
-resolution provided by STED microscopy depends on the intensity $I$ of the
+resolution obtained by STED microscopy depends on the intensity $I$ of the
 depletion beam and is given by
 \begin{equation}
   d_\text{min, STED} = \frac\lambda{2\mathrm{NA}\sqrt{I/I_\text{sat}}}\text,
@@ -289,39 +303,6 @@ refer the reader to exhaustive reviews, which, besides
 reviewing various applications, detail technical aspects of STED microscopy
 \cite{Turkowyd2016,Blom2017} as well as to a review which contains some
 anecdotal sections on how STED was developed \cite{Sahl2019}.
-
-
-% The first concept to circumvent the diffraction limit was published in 1994
-% and realised in 2000 \cite{hell+wichmann,Klar2000}
-
-
-% Ernst Abbe found in 1873 \cite{Abbe1873} that the resolution $d$ of
-% conventional light microscopes is limited by diffaction to 
-% \begin{equation}
-%   d_\text{min} = \frac{\lambda}{2\mathrm{NA}} = \frac\lambda{2n\sin\alpha}\text.
-%   \label{eq:abbe}
-% \end{equation}
-%  One consequence of the diffraction limit is
-% that a beam of light cannot be focused to a spot smaller than $d_\text{min}$.
-
-% The place in the micropscope where the diffraction limited spot limits the
-% resolution of a microscopic recording depends on the implementation of the
-% microscope.  
-
-% \begin{figure}
-% %  \includegraphics{gr/introduction/}
-% \end{figure}
-
-% \subsection{General approach}
-
-% \subsubsection{Different approaches}
-% While the majority of SRFM techniques follows the approach outlined above,
-% other techniques exist that use different approaches.  
-
-
-
-
-% \subsection{Scanning techniques}
 
 %%% Local Variables:
 %%% mode: latex
