@@ -105,11 +105,21 @@ a redistribution of the $\beta_3$-AR occurs in failing cardio-myocytes, too
 
 Similar to a SICM and wide-field combination, a combination of SICM and
 confocal FM enables imaging of the same region and sample with both techniques
-(Fig.~\ref{fig:sicm+cfm}a). The technical implementation involves mounting a
-SICM onto an inverted confocal FM. The software used to control the two
-microscopes does not have to be the same as both microscopes record data
-independently from one another. However, as the recordings are not
-simultaneous, pixel-by-pixel correlation is hardly, if at all, possible.
+(Fig.~\ref{fig:sicm+cfm}a). Again, the technical implementation requires mounting a
+SICM onto an inverted confocal FM. Two different modes of operation are
+conceivable. In the first one, both microscopes record data
+independently from each other and thus both microscopes can use their own
+soft- and hardware to control the single components. However, pixel-by-pixel
+correlation, if desired, might be impeded by different
+implementations to compensate for non-linear responses of the positioning
+piezo-actors in the different software. This problem might become even more
+prominent if different positioning devices such as beam scanning for confocal
+FM and stage scanning for SICM are used.
+
+The second mode of operation is to record the topography and the fluorescence at each
+$x, y$-position at the same time or with only a minimal temporal
+offset. Technically, this requires the synchronisation of the SICM and the
+confocal microscope, which at least requires a distinct software.  
 
 SICM and confocal FM have been combined for the first time by Korchev et al.
 \cite{Korchev2000} in 2000. The group used this combination to verify the
@@ -117,13 +127,16 @@ volume measurements obtained by SICM. Just a year later, further development
 of this combination enabled simultaneous acquisition of Ca\textsuperscript{2+}
 imaging and topography data \cite{Shevchuk2001}.
 
-Seifert et al. \cite{Seifert2017} investigated the morphological activity of
+Seifert et al. investigated the morphological activity of
 platelets by time-lapse SICM and subsequently obtained confocal recordings of
 cytoskeletal proteins of the investigated cells, allowing them to correlate
-the activity of the platelets and the structure of the cytoskeleton.
-In co-cultures of cardio-myocytes and myofibroblasts, the dynamics of
-myocyte-myofibroblast connections was linked to the expression of connexin-43
-\cite{Schultz2019}.
+the activity of the platelets and the structure of the cytoskeleton
+\cite{Seifert2017}.
+
+Another investigation which correlated SICM and subsequent confocal FM
+recordings studied cell-cell connections in co-cultures of cardio-myocytes and
+myofibroblasts. Here, the dynamics of myocyte-myofibroblast connections was
+linked to the expression of connexin-43 \cite{Schultz2019}.
 
 
 SICM has been shown to allow patch-clamp recordings from tiny neuronal
@@ -133,22 +146,23 @@ synaptic boutons (Fig.~\ref{fig:sicm+cfm}b), which, in a second step, could be
 patch-clamped.
 
 A second study on neurons investigated, besides others, cargo transport in
-neuronal dendrites \cite{Takahashi2019}. Here, the combination of
+neuronal dendrites \cite{Takahashi2019}. Here, the simultaneous combination of
 confocal FM and SICM provided a hint that the transport processes observed by
 SICM were mediated by mitochondria.
 
-
-In a study investigating the formation of human immunodeficiency virus-like
-particles (VLPs) the correlated SICM-fluorescence confocal microscopy was used
-to investigate topography changes together with the distribution of
-fluorescently labelled viral proteins like Gag or Viral Protein R
-\cite{Bednarska2020}. In contrast to investigating the virus formation with
-TIRF microscopy \cite{Jouvenet2008}, the combination of SICM and confocal FM
-allowed to investigate the apical side of the cells. It was found that the
-release of VLPs is a lot faster than the release at the basal cell side as
-known from TIRF investigations and furthermore, a potential impact on the
-release time by the application of a fluorescent marker was found
-\cite{Bednarska2020}.
+The simultaneous recording of SICM and confocal data was used to study the
+formation of human immunodeficiency virus-like particles (VLPs) together with
+the dynamics of fluorescently labelled viral proteins like Gag or Viral
+Protein R \cite{Bednarska2020}. In contrast to investigating the virus
+formation with TIRF microscopy \cite{Jouvenet2008}, the combination of SICM
+and confocal FM allowed to investigate the apical side of the cells. It was
+found that the release of VLPs is a lot faster than the release at the basal
+cell side as known from TIRF investigations and furthermore, a potential
+impact on the release time by the application of a fluorescent marker was
+found \cite{Bednarska2020}. The total height differences of the topographies
+analyzed in this study were approximately in the range of the vertical
+resolution of the confocal data, and thus, the data sets were not only
+correlated in the horizontal, but also in the vertical direction.
 
 The applications reviewed above used only a single confocal layer. Yet,
 a combination of SICM and $z$-stacking confocal FM could be used to yield more
