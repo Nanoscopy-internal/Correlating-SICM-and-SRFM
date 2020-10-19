@@ -21,18 +21,6 @@ the interface between sample and cell culture dish. However, approaches
 allowing 3D imaging by localisation microscopy exist
 \cite{Huang2008a,Huang2008} and might allow to circumvent this limit.  
 
-% Instead of having to worsen SICM resolution to match FM resolution, it might be 
-% reasonable to combine SICM and SRFM in one setup. Though, this implementation
-% comes with its own potential pitfalls, especially as due to the super resolution
-% of both techniques small deviations or disturbances are sufficient to ruin the 
-% alignment of the setup. Some of these potential pitfalls are discussed in the 
-% following:
-
-% To avoid some problems from the beginning, both the SRFM and SICM setups
-% should provide spatial resolutions in the same range. Also, if possible, one
-% software should be used to control both setups to prevent delays in the
-% imaging process due to transmitting information from one software to the other.
-
 In the case of combining SICM with a scanning technique such as STED, there
 are two alignment options: The first one is aligning the pipette tip and the
 laser beam only in the $x,y$-plane. This is comparable, in terms of data
@@ -42,13 +30,19 @@ additional alignment of the tip and, in case of STED, the two beams in the
 $z$-plane.
 
 Especially the second option would require repeated
-focal plane adjustment of the optical setup. In turn, this requires meticulous
+focal plane adjustment of the optical setup. If this is implemented by moving
+the objective (Fig.~\ref{fig:sscm_setup}b), this requires meticulous
 alignment of the excitation and depletion beam to retain the super-imposition
-of the two beams during the adjustment of the focal plane. To minimize the
+of the two beams during the adjustment of the focal plane.
+
+To minimize the
 pixels that require an adjustment of the focal plane, the adjustment has been
 only applied if a $z$-range of more than one micrometer was exceeded
-\cite{Novak2014}. If STED recordings with increased vertical resolution are
-intended, the acceptable range for not adjusting the focal plane decreases,
+\cite{Novak2014}. However, the resolution of STED microscopy depends on
+the intensity of the depletion beam, which decreases along the optical
+axis. Thus, the range for unadjusted imaging might decrease and, if STED
+recordings with increased vertical resolution are
+targeted, will decrease even further,
 which in turn might lead to longer and less stable recordings. 
 
 Due to the increased horizontal resolution, even the $x,y$-alignment of SICM
@@ -56,8 +50,10 @@ pipette and the laser beams becomes more challenging since the tolerable
 offset between the two decreases. While it has been reported that fine
 adjustment screws are sufficient to align the pipette and the beam in the
 combination of SICM and confocal microscopes \cite{Gorelik2002a,
-  Shevchuk2008,Novak2014}, additional piezo elements might be required for the
-alignment of STED and SICM.
+  Shevchuk2008,Novak2014}, additional piezo actors might be required for the
+alignment of STED and SICM. However, for the alignment of the SICM pipette and a
+confocal beam by piezo actors a remaining offset in the alignement has been
+reported \cite{Bednarska2020}. 
 
 If the depletion laser and the pipette tip are aligned in all three
 dimensions, the pipette tip might reflect the depletion beam. Since the
